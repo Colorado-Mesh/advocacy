@@ -113,7 +113,10 @@ See `EDITORIAL.md`: humans review; every claim sourced; callsigns exact; no
 `[CONFIRM]` markers may remain before publishing.
 
 ## 8. Output
-- **Discord:** flavored markdown, 2000-char chunks at `--- [message break] ---`.
-- **PDF:** `build-pdf.py issues/<month>/draft.md` → styled HTML → Browserless /pdf.
+- **A single PDF** is the deliverable. `build-pdf.py issues/<month>/draft.md`
+  → styled HTML → Browserless /pdf. Write the draft as clean markdown — no
+  length limits, no message chunking.
+- **Publishing** = share that PDF in Discord (attachment or link) and wherever
+  else the community wants it. There is no separate Discord-markdown format.
 - Verify PDF pages by rasterizing (pymupdf), not HTML screenshots — screenshots
   don't reflect @page/pagination.

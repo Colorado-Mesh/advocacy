@@ -134,22 +134,19 @@ message to seed the draw — a small follow-up once we're posting via a known me
 - "How many mesh nodes does it take to change a lightbulb? Just one, but it'll
   announce it to the whole network first."
 
-## Discord formatting constraints (output target)
+## Formatting (the draft → PDF)
 
-The newsletter is posted **in Discord**, so the composed draft must be
-Discord-flavored markdown:
+The deliverable is a **PDF** built from the markdown draft. Write clean markdown;
+there are no length limits or message chunking to worry about (the PDF is shared
+in Discord as an attachment/link when it's done):
 
 - **Bold** = `**text**`, *italic* = `*text*`, `inline code` = backticks.
-- Headers: `#`, `##`, `###` render in Discord — use them for sections.
-- Bulleted lists with `-` render. Numbered lists with `1.` render.
-- **No tables** — Discord doesn't render markdown tables. Use bullets instead.
-- **Links:** paste raw URLs (Discord auto-embeds). Masked `[text](url)` links do
-  NOT render in normal messages (only in embeds/webhooks).
-- **2000 character limit per message.** A full issue will exceed this. Plan to
-  either (a) split into multiple messages by section, (b) post as a `.md` file
-  attachment, or (c) send via a webhook embed (higher limits). Note the split
-  points in the draft with a `--- [message break] ---` marker.
-- Blockquotes with `>` render — nice for the cold open or the joke.
+- `##` headings mark sections (the PDF builder maps them to styled cards).
+- Bulleted (`-`) and numbered (`1.`) lists both work.
+- **Links:** raw URLs render as clickable links in the PDF. Use them freely —
+  they also power the Sources page.
+- Blockquotes with `>` are used for the cold open.
+- Write as long as the material warrants — depth is good; the PDF paginates itself.
 
 ## Litmus test
 

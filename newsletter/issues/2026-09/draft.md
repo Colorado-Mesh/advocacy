@@ -16,8 +16,6 @@ Future issues scope to the single prior month.
 > genuinely wonderful flood of new operators. Here's the recap, sorted by protocol
 > so you can jump straight to your corner of the mesh.
 
---- [message break] ---
-
 ## General News
 
 - **We crossed over 1,000 Discord members**, and the pace of new arrivals hasn't slowed. Between August and September the introductions channel was one of the busiest in the whole server. If you're new: welcome, and don't be shy about asking where to put your first node.
@@ -35,8 +33,6 @@ Future issues scope to the single prior month.
 
 ![Mt Blue Sky summit](photos/bluesky_b_web.jpg)
 Caption: On the summit of Mt Blue Sky (14,130 ft), M0TH3R logged which repeaters heard — and were heard by — a node at the top of Colorado. Photo: M0TH3R, Aug 31. [Two landscape options (B/C) and a portrait (A) are in issues/2026-09/photos/contact-sheet.html — open it in a browser to switch.]
-
---- [message break] ---
 
 ## Meshtastic
 
@@ -56,10 +52,6 @@ Caption: On the summit of Mt Blue Sky (14,130 ft), M0TH3R logged which repeaters
 - **Reticulum is drawing real interest.** By Rin (R-4)'s rough read, community interest splits about 65% MeshCore, 20% Meshtastic, and 14% Reticulum — and the Reticulum share is growing. danlbarron shared Alpine Linux guides and install scripts to make standing up a node easier, and Zeva posted a Docker config for a NomadNet transport node. Bridging software to link Reticulum with Meshtastic and MeshCore is also in play.
 - **Under-the-hood work continues.** There's ongoing discussion of packet handling and flow control (the Rust implementation uses a bounded queue with flow control; Python's is unbounded), plus a set of Reticulum sidecar patches Rin (R-4) shared for anyone who wants to contribute: https://github.com/Colorado-Mesh/mesh-client/tree/main/reticulum-sidecar/patches
 
---- [message break] ---
-
---- [message break] ---
-
 ## Get the Mesh Client
 
 New here, or still juggling separate apps? The community maintains **Mesh Client** — a free, cross-platform desktop app (Windows, macOS, Linux) that speaks Meshtastic, MeshCore, *and* Reticulum from one window, so you don't need a different tool for each protocol. It's actively developed — a big thanks to Joey (NV0N), its lead developer, and the contributors — and it's the easiest way to manage your nodes and follow the mesh from a real screen. Grab it at github.com/Colorado-Mesh/mesh-client and give it a spin.
@@ -76,8 +68,6 @@ New here, or still juggling separate apps? The community maintains **Mesh Client
 
 Shout-out to **Iguy**, who stood up a brand-new repeater near Lexington and Union in Colorado Springs — balcony-mounted, solar plus battery, at 6,810 ft. That "just put one up and see what happens" energy is exactly how the mesh grows, one rooftop at a time. And a nod to **Zeva**, whose fingerprints are all over this cycle: region definitions, observer onboarding, config tooling, and a steady stream of technical help in the channels. Welcome to the map, Iguy — and thanks, Zeva.
 
---- [message break] ---
-
 ## Around the Web
 
 - beala's writeup on the FCC and using 500 kHz bandwidth — a genuinely good technical deep-dive: https://beala.substack.com/p/the-fcc-want-me-to-use-more-bandwidth
@@ -89,8 +79,6 @@ Shout-out to **Iguy**, who stood up a brand-new repeater near Lexington and Unio
 If these two months had a single theme, it was *reach*. Back in August, the network was still largely a Front Range affair — a cluster of nodes trading packets between the foothills and the metro. By mid-September, the map told a different story: messages were routinely finding their way to the far corners of the state and, for the first time, spilling clean across a state line (you'll find the specifics up in the MeshCore section).
 
 What's worth sitting with isn't any one hop — it's how it happened. Nobody flipped a switch. It was the cumulative payoff of dozens of small, unglamorous acts: a node zip-tied to a balcony, an observer quietly reporting from a town nobody had covered yet, a preset nudged on a mountaintop, and an awful lot of people comparing notes about antennas and coax loss at 900 MHz. That's the whole trick to a community mesh — it doesn't scale by decree, it scales by people deciding, one rooftop at a time, that their corner of Colorado belongs on the map. Not bad for a pile of low-power radios and a shared stubbornness about coverage.
-
---- [message break] ---
 
 ## Sources & Further Reading
 

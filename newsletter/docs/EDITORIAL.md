@@ -50,7 +50,8 @@ Big News and anything with a callsign.
    notable claim has a link or a Sources entry.
 7. **Render** (Editor): `./build-pdf.py issues/<month>/draft.md`; proofread the PDF.
 8. **Approve** (Editor + admin): sign off. Only now is it publishable.
-9. **Publish** (Publisher): post to Discord (chunk-by-chunk or the PDF), pin it.
+9. **Publish** (Publisher): share the final PDF in Discord (attachment or link)
+   in the agreed channel; pin it.
 10. **Prize** (Publisher): draw last month's winner from prior-issue reactions;
     announce; remind people to react to enter for next month.
 11. **Carryover** (Editor): update `carryover.md` — close resolved threads, add

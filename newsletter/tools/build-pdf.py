@@ -11,7 +11,8 @@ Pipeline:  draft.md --(parse)--> styled HTML (pdf-template.html) --> Browserless
 Notes:
   - Standard library only. Ships its own small markdown->HTML converter so there
     are no pip deps.
-  - Strips <!-- comment blocks --> and the "--- [message break] ---" markers
+  - Strips <!-- comment blocks --> (and any legacy "--- [message break] ---"
+    markers, harmlessly, in case an old draft still has them).
     (those are only for the Discord post, not the PDF).
   - Maps each "## <emoji> Section" heading to a styled card + colored badge.
   - Highlights [CONFIRM: ...] markers so reviewers can't miss them.
@@ -33,8 +34,7 @@ import urllib.request
 from icons import icon_for, masthead_icon
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)  # project root (tools/ lives under it)
-TEMPLATE = os.path.join(ROOT, "templates", "pdf-template.html")
+TEMPLATE = os.path.join(HERE, "pdf-template.html")
 DRAFT_DIR = HERE  # set to the draft's directory in main(); relative image paths resolve here
 
 
@@ -42,8 +42,8 @@ def _logo_data_uri():
     """Embed the official logo (brand/logo_256.png) as a data URI so the PDF is
     self-contained. Prefer PNG (small, reliable) over the 525KB SVG. Falls back
     to an empty string if the asset is missing."""
-    for name in ("logo_256.png", "logo_400.png"):
-        p = os.path.join(ROOT, "brand", name)
+    for name in ("brand/logo_256.png", "brand/logo_400.png"):
+        p = os.path.join(HERE, name)
         if os.path.isfile(p):
             with open(p, "rb") as f:
                 b64 = base64.b64encode(f.read()).decode()

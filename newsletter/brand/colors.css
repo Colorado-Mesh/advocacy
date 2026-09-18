@@ -1,0 +1,73 @@
+:root {
+    /* White */
+    --color-white: #FFFFFF;
+    --color-off-white: #EDEDED;
+    --color-dirty-white: #C7C7C7;
+
+    /* Black */
+    --color-black: #0D0D0D;
+    
+    /* Red */
+    --color-red-1: #f97699;
+    --color-red-2: #eb6383;
+    --color-red-3: #dd506d;
+    --color-red-4: #ce3c57;
+    --color-red-5: #bf2441;
+    --color-red-6: #9a1f39;
+    --color-red-7: #77192f;
+    --color-red-8: #551324;
+    --color-red-9: #360D18;
+    --color-lightest-red: var(--color-red-1);
+    --color-light-red: var(--color-red-3);
+    --color-red: var(--color-red-5);
+    --color-dark-red: var(--color-red-7);
+    --color-darkest-red: var(--color-red-9);
+    
+    /* Yellow */
+    --color-yellow-1: #F8E7B9;
+    --color-yellow-2: #EED386;
+    --color-yellow-3: #ECC455;
+    --color-yellow-4: #E7B833;
+    --color-yellow-5: #F2B138;
+    --color-yellow-6: #F0B131;
+    --color-yellow-7: #E29D12;
+    --color-yellow-8: #CF8E0C;
+    --color-yellow-9: #A67107;
+    --color-lightest-yellow: var(--color-yellow-1);
+    --color-light-yellow: var(--color-yellow-3);
+    --color-yellow: var(--color-yellow-5);
+    --color-dark-yellow: var(--color-yellow-7);
+    --color-darkest-yellow: var(--color-yellow-9);
+    
+    /* Blue */
+    --color-blue-1: #16538E;
+    --color-blue-2: #134F8B;
+    --color-blue-3: #104B88;
+    --color-blue-4: #0D4886;
+    --color-blue-5: #0A4483;
+    --color-blue-6: #074080;
+    --color-blue-7: #042B60;
+    --color-blue-8: #011640;
+    --color-blue-9: #011033;
+    --color-lighest-blue: var(--color-blue-1);
+    --color-light-blue: var(--color-blue-3);
+    --color-blue: var(--color-blue-5);
+    --color-dark-blue: var(--color-blue-7);
+    --color-darkest-blue: var(--color-blue-9);
+
+    /* Green */
+    --color-green-1: #76e0a4;
+    --color-green-2: #61ca8e;
+    --color-green-3: #4cb578;
+    --color-green-4: #36a062;
+    --color-green-5: #1C8C4D;
+    --color-green-6: #106641;
+    --color-green-7: #034035;
+    --color-green-8: #02342B;
+    --color-green-9: #012821;
+    --color-lightest-green: var(--color-green-1);
+    --color-light-green: var(--color-green-3);
+    --color-green: var(--color-green-5);
+    --color-dark-green: var(--color-green-7);
+    --color-darkest-green: var(--color-green-9);
+}

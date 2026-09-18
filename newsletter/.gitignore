@@ -1,0 +1,50 @@
+# ============================================================================
+# Colorado Mesh Newsletter — .gitignore
+# Keep community Discord data, tokens, and machine state OUT of git.
+# The CODE and PROCESS are public; the raw private chatter is not.
+# See DATA-PRIVACY.md for the why.
+# NOTE: git does NOT support trailing inline comments on pattern lines —
+#       every pattern is on its own line, comments on their own lines.
+# ============================================================================
+
+# --- Discord raw data & triage intermediates (PRIVATE — never commit) ---
+**/data/
+**/raw-*.jsonl
+**/*shortlist*.jsonl
+**/candidates*.json
+**/stage1*.md
+
+# --- gatherer state (per-channel high-water marks) ---
+.state/
+**/state.json
+
+# --- secrets / tokens / credentials ---
+*.env
+.env
+*token*
+*secret*
+*.pem
+*.key
+
+# --- per-issue working scratch that isn't for publication ---
+**/items-list.md
+**/PICK-LIST.md
+**/photos/
+
+# --- python / os cruft ---
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+
+# ============================================================================
+# WHAT *IS* COMMITTED (these are intentionally NOT ignored):
+#   tools/        - all the scripts (transparent)
+#   templates/    - the markdown + PDF templates
+#   brand/        - official brand assets (from Colorado-Mesh/branding)
+#   docs/         - DESIGN, EDITORIAL, voice guide
+#   LIFECYCLE.md, README.md, DATA-PRIVACY.md
+#   issues/<month>/draft.md          - the APPROVED, reviewed markdown
+#   issues/<month>/newsletter-*.pdf  - the final published PDF
+# ============================================================================

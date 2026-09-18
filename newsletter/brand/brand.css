@@ -1,0 +1,45 @@
+/* ============================================================================
+   Colorado Mesh Newsletter — brand tokens
+   Maps the OFFICIAL palette (brand/colors.css, from the Colorado-Mesh/branding
+   repo) to newsletter design roles. Edit role assignments here, not raw hexes.
+   The brand identity is: deep NAVY BLUE primary, GREEN secondary, GOLD accent.
+   ============================================================================ */
+:root {
+  /* --- official palette (verbatim from brand/colors.css) --- */
+  --cm-white:#FFFFFF;  --cm-off-white:#EDEDED;  --cm-dirty-white:#C7C7C7;
+  --cm-black:#0D0D0D;
+
+  --cm-red-1:#f97699; --cm-red-3:#dd506d; --cm-red-5:#bf2441; --cm-red-7:#77192f; --cm-red-9:#360D18;
+
+  --cm-yellow-1:#F8E7B9; --cm-yellow-3:#ECC455; --cm-yellow-5:#F2B138;
+  --cm-yellow-7:#E29D12; --cm-yellow-9:#A67107;
+
+  --cm-blue-1:#16538E; --cm-blue-3:#104B88; --cm-blue-5:#0A4483;
+  --cm-blue-6:#074080; --cm-blue-7:#042B60; --cm-blue-8:#011640; --cm-blue-9:#011033;
+
+  --cm-green-1:#76e0a4; --cm-green-3:#4cb578; --cm-green-5:#1C8C4D;
+  --cm-green-6:#106641; --cm-green-7:#034035; --cm-green-8:#02342B; --cm-green-9:#012821;
+
+  /* --- newsletter design roles (built from the official palette) --- */
+  --bg:          var(--cm-blue-9);    /* #011033 deep navy — the flyer canvas */
+  --panel:       #04213f;             /* between blue-9 and blue-8, section card bg */
+  --panel2:      #062b52;             /* emphasized card bg (Big News / Story) */
+  --band:        #010c26;             /* solid heading band, darker than panel */
+  --edge:        #103a63;             /* hairline borders (a mid navy) */
+
+  --primary:     var(--cm-blue-1);    /* #16538E brand blue for links/lines */
+  --primary-soft:#5b9bd6;
+  --green:       var(--cm-green-3);   /* #4cb578 secondary accent */
+  --green-soft:  var(--cm-green-1);
+  --gold:        var(--cm-yellow-5);  /* #F2B138 warm accent */
+  --gold-soft:   var(--cm-yellow-1);
+  --red:         var(--cm-red-5);
+
+  --text:        var(--cm-off-white); /* #EDEDED body text on navy */
+  --text-dim:    #9fb4cc;             /* muted blue-grey */
+
+  /* --- per-protocol accent colors (for the protocol sections) --- */
+  --mt:  var(--cm-green-3);   /* Meshtastic → green */
+  --mc:  var(--cm-blue-1);    /* MeshCore  → brand blue */
+  --rns: var(--cm-yellow-5);  /* Reticulum → gold */
+}

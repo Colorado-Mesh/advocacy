@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colorado Mesh Monthly — {{MONTH}}</title>
+<style>
+  /* Official palette mapped to roles — see brand.css / DESIGN.md §1 */
+  :root{
+    --bg:#011033; --panel:#04213f; --panel2:#062b52; --band:#010c26; --edge:#103a63;
+    --primary:#16538E; --primary-soft:#5b9bd6;
+    --green:#4cb578; --green-soft:#76e0a4;
+    --gold:#F2B138; --gold-soft:#F8E7B9;
+    --red:#bf2441;
+    --text:#EDEDED; --text-dim:#9fb4cc;
+    --mt:#4cb578;   /* Meshtastic green */
+    --mc:#3a8fd6;   /* MeshCore blue (lifted for contrast on navy) */
+    --rns:#F2B138;  /* Reticulum gold */
+    --rowgap:16px;
+  }
+  @page{ size:Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--text); background:var(--bg); font-size:9.8pt; line-height:1.4; }
+  a{ color:var(--gold-soft); text-decoration:none; word-break:break-word; }
+  strong{ color:#fff; }
+
+  /* ---- masthead: logo + wordmark, full-bleed navy w/ gold rule ---------- */
+  .masthead{ display:flex; align-items:center; gap:20px;
+    background:
+      radial-gradient(120% 180% at 90% -30%, rgba(22,83,142,.55), transparent 60%),
+      linear-gradient(120deg,#010c26 0%,#02163a 55%,#0a3566 100%);
+    color:#fff; padding:22px 30px; border-bottom:3px solid var(--gold);
+    position:relative; overflow:hidden; }
+  .masthead .logo{ width:74px; height:74px; flex:0 0 auto; }
+  .masthead .logo img{ width:100%; height:100%; object-fit:contain;
+    filter:drop-shadow(0 2px 6px rgba(0,0,0,.5)); }
+  .masthead .titles{ min-width:0; }
+  .kicker{ text-transform:uppercase; letter-spacing:.3em; font-size:8pt;
+    font-weight:700; color:var(--gold); margin:0 0 3px; }
+  .masthead h1{ font-size:27pt; margin:0; line-height:1.02; font-weight:800; letter-spacing:-.5px; }
+  .masthead .month{ font-size:11.5pt; margin-top:5px; color:var(--green-soft); font-weight:700; }
+  .masthead .tag{ font-size:8.5pt; margin-top:6px; color:#bcd2e6; max-width:80%; }
+
+  .wrap{ padding:18px 26px 12px; }
+  .coldopen{ border-left:4px solid var(--gold); background:rgba(242,177,56,.10);
+    padding:11px 15px; border-radius:0 6px 6px 0; font-size:10.5pt; font-style:italic;
+    color:var(--text); margin:0 0 6px; }
+
+  /* ---- rows: break-safe flex rows; spacing via TOP padding (survives page
+     breaks so continuation pages keep clearance) — see DESIGN.md §3 --------- */
+  .flow{ display:block; }
+  .row{ display:flex; gap:14px; padding-top:var(--rowgap); margin:0;
+    align-items:stretch; break-inside:avoid; page-break-inside:avoid; }
+  .row.full{ display:block; }
+  .row > .sec{ flex:1 1 0; width:auto; min-width:0; }
+
+  /* ---- section card: SOLID heading band + accent divider ---------------- */
+  .sec,.span2{ background:var(--panel); border:1px solid var(--edge);
+    border-radius:9px; overflow:hidden; }
+  .span2{ background:var(--panel2); border-left:4px solid var(--gold); }
+  .sec h2,.span2 h2{ font-size:11pt; margin:0; display:flex; align-items:center;
+    gap:8px; font-weight:800; color:#fff; padding:9px 14px; background:var(--band);
+    border-bottom:2px solid var(--green); }
+  .span2 h2{ font-size:12.5pt; border-bottom-color:var(--gold); }
+  .sec .badge,.span2 .badge{ width:21px;height:21px;border-radius:5px;
+    display:inline-flex;align-items:center;justify-content:center;font-size:12px;
+    flex:0 0 auto; background:var(--green); color:#04150a; }
+  .span2 .badge{ background:var(--gold); }
+  .body{ padding:12px 14px 10px; }
+  .body > :first-child{ margin-top:0; padding-top:0; }
+  ul{ margin:0 0 4px; padding-left:16px; } li{ margin:0 0 5px; }
+  li::marker{ color:var(--green); } p{ margin:0 0 7px; }
+
+  /* per-section accent (heading divider + badge) — cohesive, brand-family */
+  .s-news h2{ border-bottom-color:var(--gold); }      .s-news .badge{ background:var(--gold); }
+  .s-events .badge{ background:var(--primary); color:#fff; }
+  .s-events h2{ border-bottom-color:var(--primary); }
+  .s-client .badge{ background:var(--primary); color:#fff; }
+  .s-client h2{ border-bottom-color:var(--primary); }
+  .s-client{ border-left:4px solid var(--primary); }
+  .s-spot .badge{ background:var(--gold); }           .s-spot h2{ border-bottom-color:var(--gold); }
+  .s-cta{ border-left:4px solid var(--gold); }
+  .s-cta .badge{ background:var(--gold); }            .s-cta h2{ border-bottom-color:var(--gold); }
+  .s-market .badge{ background:var(--red); color:#fff; }
+  .s-market h2{ border-bottom-color:var(--red); }
+
+  /* ---- PROTOCOL sections: color-coded lead cards ------------------------ */
+  .s-mt{  border-left:4px solid var(--mt); }   .s-mt h2{ border-bottom-color:var(--mt); }   .s-mt .badge{ background:var(--mt); }
+  .s-mc{  border-left:4px solid var(--mc); }   .s-mc h2{ border-bottom-color:var(--mc); }   .s-mc .badge{ background:var(--mc); color:#fff; }
+  .s-rns{ border-left:4px solid var(--rns); }  .s-rns h2{ border-bottom-color:var(--rns); } .s-rns .badge{ background:var(--rns); }
+  .proto-tag{ font-size:7.5pt; text-transform:uppercase; letter-spacing:.12em;
+    font-weight:700; margin-left:auto; opacity:.8; }
+
+  /* link lists */
+  .s-wiki li,.s-web li{ list-style:none; margin-left:-12px; padding:3px 0;
+    border-bottom:1px dashed var(--edge); font-size:9.2pt; }
+  .s-wiki li:last-child,.s-web li:last-child{ border-bottom:none; }
+
+  /* Photo / Video of the Month */
+  .s-photo .frame{ width:100%; aspect-ratio:16/9; border:2px dashed #2f5a86;
+    border-radius:6px; background:rgba(255,255,255,.03); display:flex;
+    align-items:center; justify-content:center; text-align:center;
+    color:var(--text-dim); font-size:8.5pt; padding:8px; margin:2px 0 5px; }
+  .s-photo .frame img{ width:100%; height:100%; object-fit:cover; border-radius:5px; }
+  .s-photo .cap{ font-size:8.2pt; color:var(--text-dim); font-style:italic; }
+
+  /* sign-off */
+  .signoff{ break-inside:avoid; background:linear-gradient(120deg,#010c26,#0a3566);
+    border:1px solid var(--edge); border-top:3px solid var(--gold);
+    border-radius:9px; padding:14px 18px; margin:0; }
+  .signoff h2{ color:#fff; font-size:12.5pt; margin:0 0 12px; display:flex;
+    align-items:center; gap:8px; padding-bottom:10px; border-bottom:2px solid var(--gold); }
+  .signoff .badge{ background:var(--gold); color:#04150a; width:22px;height:22px;
+    border-radius:5px; display:inline-flex; align-items:center; justify-content:center; font-size:12px; }
+  .joke,.prize{ border-radius:7px; padding:8px 12px; margin:7px 0; }
+  .joke{ background:rgba(242,177,56,.14); border:1px solid rgba(242,177,56,.45); color:var(--gold-soft); }
+  .prize{ background:rgba(76,181,120,.14); border:1px solid rgba(76,181,120,.45); color:var(--green-soft); }
+  .joke b,.prize b{ color:var(--gold); }
+  .seventythree{ font-size:15pt; font-weight:800; letter-spacing:.14em; color:var(--gold); margin-top:6px; }
+
+  /* citations page */
+  .citations{ break-before:page; page-break-before:always; padding:var(--rowgap) 30px 26px; }
+  .citations h2{ font-size:14pt; display:flex; align-items:center; gap:8px; color:#fff;
+    border-bottom:2px solid var(--edge); padding-bottom:6px; }
+  .citations .badge{ width:22px;height:22px;border-radius:5px;background:var(--gold);
+    color:#04150a; display:inline-flex; align-items:center; justify-content:center; font-size:12px; }
+  ol.refs{ column-count:2; column-gap:22px; font-size:8.6pt; line-height:1.4;
+    padding-left:18px; margin-top:10px; color:var(--text); }
+  ol.refs li{ margin:0 0 6px; break-inside:avoid; } ol.refs li::marker{ color:var(--green); font-weight:700; }
+
+  .footer{ background:#010c26; color:var(--text-dim); font-size:7.5pt;
+    text-align:center; padding:9px 26px; border-top:1px solid var(--edge); }
+  .confirm{ background:rgba(242,177,56,.18); color:var(--gold-soft);
+    border:1px solid rgba(242,177,56,.4); padding:0 5px; border-radius:3px; font-size:8pt; }
+</style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="logo"><img src="{{LOGO}}" alt="Colorado Mesh"></div>
+    <div class="titles">
+      <p class="kicker">Colorado Mesh Community</p>
+      <h1>Colorado Mesh Monthly</h1>
+      <div class="month">{{MONTH}}</div>
+      <div class="tag">Your once-a-month digest of everything on the mesh — so you don't have to read every message.</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    {{COLDOPEN}}
+    <div class="flow">
+      {{FLOW}}
+      <div class="row full">{{SIGNOFF}}</div>
+    </div>
+  </div>
+
+  {{CITATIONS}}
+
+  <div class="footer">
+    Made by the Colorado Mesh community · wiki.coloradomesh.org · Contribute to next month in Discord
+  </div>
+</body>
+</html>

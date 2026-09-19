@@ -1,0 +1,34 @@
+# Discord channel EXCLUDE list (Colorado Mesh).
+#
+# gather-discord.py auto-discovers every readable channel in the allowed
+# guild(s). Put channel IDs here that you CAN read but do NOT want in the
+# newsletter (off-topic, memes, bot-spam, notifications, per-user junk).
+# One per line; text after the ID and # comments are ignored.
+#
+# Pre-filled with the obvious noise; tune after the first dry-run.
+
+# --- noise / meta ---
+1436164747581067274   off-topic
+1496537700717695157   gaming
+1549105241142599792   spammers-only
+1436201174058405980   bots-and-testing
+1436159849158279259   polls
+1500545329865429002   visitor-guest-book
+1436159920939733052   pictures
+1436165284775067708   rules
+
+# --- automated notifications (not human discussion) ---
+1503588195638444135   linode-notifications
+1491896487011942400   alerts
+
+# --- internal org / leadership (probably not for a public newsletter) ---
+1436165174271934514   leadership-chat
+1436434120287850506   org-planning
+1469896604390527202   domain-name-website-email-etc
+1473773574673268778   discord-feature-requests
+
+# NOTE: kept IN scope (likely newsletter-worthy): announcements, blog,
+# meshtastic-updates, meshcore-updates, mesh-client-releases, network-status,
+# mesh-ops, general, hardware, projects-and-builds, rf-propagation, ham-radio,
+# wardriving, weekly-net, reticulum, and the regional channels. Move any of
+# those here if they turn out to be too noisy.

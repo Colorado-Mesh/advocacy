@@ -1,0 +1,9 @@
+# Discord guild (server) ALLOW-LIST.
+#
+# The newsletter gatherer ONLY touches the servers listed here. This protects
+# personal/unrelated servers the token is also a member of. One guild ID per
+# line; text after the ID and # comments are ignored.
+#
+# Get a guild ID: enable Developer Mode, right-click the server icon > Copy Server ID.
+
+1436156966648152271   Colorado Mesh

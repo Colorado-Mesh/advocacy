@@ -31,8 +31,7 @@ Future issues scope to the single prior month.
 - **We had a strong showing at the RMHAM Summer Swapfest (Aug 23)** — a good turnout at our tables and a lot of great conversations with folks new to the mesh. Thanks to everyone who staffed it.
 
 ![Colorado Mesh at the RMHAM Summer Swapfest, Aug 23 (photo: JohnC)](photos/event_2026-09-17_JohnC_2_web.jpg)
-
-![The Colorado Mesh table at the RMHAM Summer Swapfest (photo: JohnnyW5KV)](photos/event_2026-09-17_JohnnyW5KV_1_web.jpg)
+![The Colorado Mesh table at the Swapfest (photo: JohnnyW5KV)](photos/event_2026-09-17_JohnnyW5KV_1_web.jpg)
 - **Parker Radio Association** held its monthly meeting on September 7 with a presentation on AllStar (via JohnnyW5KV). Keep an eye on announcements for the next one.
 - **Weekly Net — every Thursday.** There's no dedicated channel: just post to the MeshCore Public channel any time on Thursday and you're checked in. New this cycle, Old Man Malice wired the net into MeshWars so your check-in earns credit there too.
 

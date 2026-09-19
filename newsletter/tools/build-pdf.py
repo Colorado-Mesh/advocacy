@@ -63,7 +63,7 @@ BROWSERLESS_TOKEN = os.environ.get("BROWSERLESS_TOKEN", "kiro-browser-2026")
 SECTION_CLASSES = [
     (("general news",),                     "s-news",   "📰", "full", "normal"),
     (("event", "meetup"),                   "s-events", "📅", "col",  "normal"),
-    (("photo", "video"),                    "s-photo",  "📸", "col",  "photo"),
+    (("photo", "video"),                    "s-photo",  "📸", "full", "photo"),
     (("mesh client", "mesh-client"),        "s-client", "💻", "col",  "normal"),
     (("meshtastic",),                       "s-mt",     "📶", "full", "normal"),
     (("meshcore",),                         "s-mc",     "🔗", "full", "normal"),
@@ -196,19 +196,33 @@ def render_block(lines):
         if buf_para:
             out.append("<p>" + inline_md(" ".join(buf_para)) + "</p>")
             buf_para = []
+    buf_figs = []  # consecutive image lines -> a side-by-side photo row
+
+    def close_figs():
+        nonlocal buf_figs
+        if not buf_figs:
+            return
+        figs = []
+        for credit, src in buf_figs:
+            cap = f'<figcaption>{inline_md(credit)}</figcaption>' if credit else ""
+            figs.append(f'<figure class="inline-photo">'
+                        f'<img src="{_embed_image(src)}" alt="{html.escape(credit)}">{cap}</figure>')
+        if len(figs) == 1:
+            out.append(figs[0])
+        else:  # 2+ consecutive images -> side-by-side row (tighter, less trailing space)
+            out.append(f'<div class="photo-row">{"".join(figs)}</div>')
+        buf_figs = []
 
     for line in lines:
         s = line.strip()
         if not s:
-            close_list(); close_para(); continue
+            close_list(); close_para(); close_figs(); continue
         fig = _FIG_RE.match(s)
         if fig:
             close_list(); close_para()
-            credit, src = fig.group(1).strip(), fig.group(2).strip()
-            cap = f'<figcaption>{inline_md(credit)}</figcaption>' if credit else ""
-            out.append(f'<figure class="inline-photo">'
-                       f'<img src="{_embed_image(src)}" alt="{html.escape(credit)}">{cap}</figure>')
+            buf_figs.append((fig.group(1).strip(), fig.group(2).strip()))
             continue
+        close_figs()
         li = re.match(r"^[-*]\s+(.*)", s)
         if li:
             close_para()
@@ -218,7 +232,7 @@ def render_block(lines):
             buf_list[-1] += " " + s
         else:
             buf_para.append(s)
-    close_list(); close_para()
+    close_list(); close_para(); close_figs()
     return "\n".join(out)
 
 
@@ -316,7 +330,9 @@ def build_html(md):
     for heading, inner_html, inner_lines in sections:
         cls, icon, zone, kind = classify(heading)
         if kind == "photo":
-            flow.append(("sec", _card(cls, icon, heading, render_photo(inner_lines))))
+            span2 = zone == "full"
+            flow.append(("span2" if span2 else "sec",
+                         _card(cls, icon, heading, render_photo(inner_lines), span2=span2)))
         elif kind == "signoff":
             signoff_html = (f'<div class="signoff {cls}">'
                             f'<h2><span class="badge">{icon_for(cls)}</span>'

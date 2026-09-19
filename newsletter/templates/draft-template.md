@@ -34,6 +34,9 @@ Caption: <describe / credit @who. Drop an image URL or ![](path) to embed.>
 ## 🛰️ Reticulum
 - <RRC server status, transport nodes, RNode, bridges>
 
+## 🛠️ Gear & Firmware
+- <new device, firmware release, bug/issue notice, recall, safety bulletin, or a buy/build tip. Lead with anything urgent.>
+
 ## 💻 Get the Mesh Client
 The community's cross-platform **Mesh Client** app (Windows/macOS/Linux) speaks Meshtastic, MeshCore, and Reticulum from one window. Free and actively developed. [download link]
 

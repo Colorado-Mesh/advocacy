@@ -68,6 +68,8 @@ SECTION_CLASSES = [
     (("meshtastic",),                       "s-mt",     "📶", "full", "normal"),
     (("meshcore",),                         "s-mc",     "🔗", "full", "normal"),
     (("reticulum",),                        "s-rns",    "🛰️", "full", "normal"),
+    (("gear", "firmware", "hardware", "bulletin", "recall"),
+                                            "s-gear",   "🛠️", "full", "normal"),
     (("for sale", "wanted", "classified", "market"), "s-market", "🛒", "col", "normal"),
     (("call to action", "call-to-action", "cta"), "s-cta", "📣", "col", "normal"),
     (("spotlight",),                        "s-spot",   "🌟", "col",  "normal"),

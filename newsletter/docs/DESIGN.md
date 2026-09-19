@@ -88,6 +88,11 @@ recurring ones). Each section maps to a CSS class `s-<key>` + a badge.
      observers, naming convention, firmware.
    - **🛰️ Reticulum** (`s-rns`, gold) — e.g. *RRC server* status, transport nodes,
      RNode usage, bridges.
+6a. **🛠️ Gear & Firmware** (`s-gear`) — cross-protocol hardware/firmware news:
+   new devices, firmware releases, bug/issue notices, recalls, safety bulletins,
+   and buy/build tips worth knowing. Lead with anything urgent (a recall or a
+   "don't do X or you'll fry your board" warning). Sourced from #hardware,
+   #software, #mesh-client-releases, and the protocol channels.
 6b. **💻 Get the Mesh Client** (`s-client`, RECURRING) — a short standing reminder
    that the community's cross-platform Mesh Client app exists, with where to get
    it. Appears every issue (like the Weekly Net reminder), refreshed with any

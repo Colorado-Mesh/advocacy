@@ -62,6 +62,17 @@ Caption: On the summit of Mt Blue Sky (14,130 ft), M0TH3R logged which repeaters
 - **The Mesh Client is a great Reticulum window.** Beyond RRC chat, it now gives you NomadNet browsing — and, new this cycle, *editing* — all in one app. **Runr** and others have been experimenting with a range of Reticulum mobile apps on Android and iOS too, so there are more ways than ever to get on Reticulum from your pocket.
 - **Work on the Lookout bridge.** omgitsgela has been configuring a bridge up on Lookout Mountain — a WiFi repeater for remote access, MQTT bridging, and local mirroring of MediumFast and LongFast, with a second radio planned to add LongFast support. It's a meaningful step toward tying the high-site infrastructure together.
 
+## Gear & Firmware
+
+New devices, firmware, and the occasional "don't do that" bulletin from the workbench channels this cycle:
+
+- **Safety bulletin — never remove the antenna on a powered board.** A good reminder from Packman5280: if a LoRa board powers up (or stays powered) with no antenna attached, you can burn out the RF power amp. Power down *before* you swap antennas. Cheap mistake, expensive board.
+- **Firmware fix for RNode over BLE.** An update this cycle fixed Bluetooth for RNode on ESP/nRF boards (V3, V4, T-Echo, T114). If you run RNode and BLE's been flaky, grab the update. (dude.eth, [#software](https://discord.com/channels/1436156966648152271/1436717476389060628))
+- **Meshtastic firmware fixed a man-in-the-middle issue** — worth updating your nodes for. (See the Meshtastic section above.)
+- **Custom repeater firmware from nightcrawler.** A standalone build that bakes in the advert/policy filtering from OpenHop — shared for anyone who wants to try it. ([#meshcore](https://discord.com/channels/1436156966648152271/1436175539135058082))
+- **Board note — the RAK 1W is a lot of board for the money.** JohnnyW5KV gives it a +1: integrated input/output filters, solid little board. A popular pick for repeaters right now.
+- **OTA gotcha.** A couple of folks learned the hard way that an over-the-air update on a rooftop/solar node can leave you climbing up to re-flash if it doesn't take — worth having a wired fallback plan before you push firmware to anything hard to reach.
+
 ## Get the Mesh Client
 
 New here, or still juggling separate apps? The community maintains **Mesh Client** — a free, cross-platform desktop app (Windows, macOS, Linux) that speaks Meshtastic, MeshCore, *and* Reticulum from one window, so you don't need a different tool for each protocol. It's actively developed — a big thanks to Joey (NV0N), its lead developer, and the contributors — and it's the easiest way to manage your nodes and follow the mesh from a real screen. Grab it at github.com/Colorado-Mesh/mesh-client and give it a spin.

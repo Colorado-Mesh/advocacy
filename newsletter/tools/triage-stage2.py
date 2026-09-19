@@ -60,6 +60,8 @@ Classify each item into exactly one section (protocol sections are important):
   "mt"    = Meshtastic-specific (MediumFast rollout, presets, MQTT, devices)
   "mc"    = MeshCore-specific (scopes, Nebraska/DIA links, observers, firmware, naming)
   "rns"   = Reticulum-specific (RRC server, transport nodes, RNode, bridges)
+  "gear"  = hardware/firmware news: new devices, firmware releases, bug/issue
+            notices, recalls, safety bulletins, buy/build tips (cross-protocol)
   "market"= for-sale / wanted classifieds (include price/ask + contact if present)
   "cta"   = a concrete call to action / ask of the community
   "spot"  = a person / node / build worth celebrating
@@ -67,7 +69,7 @@ Classify each item into exactly one section (protocol sections are important):
   "story" = a longer narrative worth featuring
 
 Return STRICT JSON: an object with key "items" whose value is an array of:
-  {"section":"news|events|mt|mc|rns|market|cta|spot|web|story",
+  {"section":"news|events|mt|mc|rns|gear|market|cta|spot|web|story",
    "headline":"<=90 char summary in the newsletter voice",
    "detail":"2-4 sentences (more if the topic warrants), facts only",
    "people":["handles/callsigns involved"],
@@ -199,7 +201,7 @@ def main():
         print(f"    +{len(parsed['items'])} items", file=sys.stderr)
 
     # de-dupe by (section, headline lowercased first 50 chars)
-    SECTIONS = ["news", "events", "mt", "mc", "rns", "market", "cta", "spot", "web", "story"]
+    SECTIONS = ["news", "events", "mt", "mc", "rns", "gear", "market", "cta", "spot", "web", "story"]
     seen = set()
     grouped = {s: [] for s in SECTIONS}
     for it in all_items:

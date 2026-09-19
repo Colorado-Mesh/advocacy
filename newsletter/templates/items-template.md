@@ -38,6 +38,12 @@ _RRC server status, transport nodes, RNode usage, bridges._
 
 ---
 
+## 🛠️ Gear & Firmware `#gear`
+_New devices, firmware releases, bug/issue notices, recalls, safety bulletins, buy/build tips._
+- [ ] 
+
+---
+
 ## 🛒 For Sale & Wanted `#market`
 _Only if submissions. Format: `SALE`/`WANTED` · item · price/ask · @contact._
 - [ ] 

@@ -17,12 +17,12 @@ import re
 
 SEC_TITLES = {
     "news": "General News", "events": "Events & Meetups", "mt": "Meshtastic",
-    "mc": "MeshCore", "rns": "Reticulum", "market": "For Sale & Wanted",
+    "mc": "MeshCore", "rns": "Reticulum", "gear": "Gear & Firmware", "market": "For Sale & Wanted",
     "cta": "Call to Action", "spot": "Community Spotlight", "web": "Around the Web",
     "story": "Story of the Month candidates",
 }
-ORDER = ["news", "events", "mt", "mc", "rns", "market", "cta", "spot", "web", "story"]
-CAP = {"mt": 12, "mc": 12, "rns": 9, "spot": 8, "events": 8, "news": 8,
+ORDER = ["news", "events", "mt", "mc", "rns", "gear", "market", "cta", "spot", "web", "story"]
+CAP = {"mt": 12, "mc": 12, "rns": 9, "gear": 10, "spot": 8, "events": 8, "news": 8,
        "cta": 6, "market": 5, "web": 5, "story": 4}
 
 

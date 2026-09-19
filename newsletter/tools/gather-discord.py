@@ -228,7 +228,6 @@ def load_state(path):
 
 
 def save_state(path, state):
-    os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2, sort_keys=True)
@@ -312,9 +311,7 @@ def main():
     ap.add_argument("--raw-out",
                     help="Also dump every fetched message as JSONL to this file "
                     "(for role-weighting + LLM triage). Appended if it exists.")
-    ap.add_argument("--state", default=os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".state", "state.json"),
-        help="Per-channel high-water-mark state (gitignored). Default: ../.state/state.json")
+    ap.add_argument("--state", default=os.path.join(os.path.dirname(__file__), "state.json"))
     ap.add_argument("--items")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
@@ -398,6 +395,16 @@ def main():
                 if m.get("author", {}).get("bot") and not args.include_bots:
                     continue
                 author = m.get("author", {}) or {}
+                atts = m.get("attachments", []) or []
+                # keep the real image attachment URLs (+ dims) so we can pull
+                # candidate photos per issue. Non-image attachments are ignored.
+                images = [
+                    {"url": a.get("url"), "w": a.get("width"), "h": a.get("height"),
+                     "name": a.get("filename")}
+                    for a in atts
+                    if (a.get("content_type", "") or "").startswith("image/")
+                    or re.search(r"\.(png|jpe?g|gif|webp)(\?|$)", a.get("filename", ""), re.I)
+                ]
                 rec = {
                     "id": m.get("id"),
                     "channel_id": cid,
@@ -408,7 +415,8 @@ def main():
                     "author": author.get("global_name") or author.get("username", "?"),
                     "content": (m.get("content") or "").strip(),
                     "reactions": sum(r.get("count", 0) for r in m.get("reactions", [])),
-                    "attachments": len(m.get("attachments", []) or []),
+                    "attachments": len(atts),
+                    "images": images,
                     "urls": re.findall(r"https?://[^\s<>\"']+", m.get("content") or ""),
                     "reply_to": (m.get("referenced_message") or {}).get("id"),
                 }
@@ -459,8 +467,7 @@ def main():
 
     items = args.items
     if not items:
-        cands = sorted(glob.glob(os.path.join(
-            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "issues/*/items-list.md")),
+        cands = sorted(glob.glob(os.path.join(os.path.dirname(__file__), "issues/*/items-list.md")),
                        key=os.path.getmtime, reverse=True)
         items = cands[0] if cands else None
     if not items or not os.path.isfile(items):

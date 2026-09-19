@@ -154,8 +154,31 @@ def parse_sections(md):
     return month, " ".join(coldopen).strip(), sections
 
 
+def _embed_image(src):
+    """Return an <img>-ready src: a local path becomes a base64 data URI (so the
+    PDF is self-contained and Browserless can render it); http(s)/data pass through."""
+    if not src.lower().startswith(("http://", "https://", "data:")):
+        path = src if os.path.isabs(src) else os.path.join(DRAFT_DIR, src)
+        if not os.path.isfile(path):
+            path = os.path.join(HERE, src)
+        if os.path.isfile(path):
+            ext = os.path.splitext(path)[1].lstrip(".").lower()
+            mime = "jpeg" if ext in ("jpg", "jpeg") else ext
+            with open(path, "rb") as f:
+                return f"data:image/{mime};base64,{base64.b64encode(f.read()).decode()}"
+    return src
+
+
+# a markdown image on its own line: ![credit/caption](path-or-url)
+_FIG_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
+
+
 def render_block(lines):
-    """Render a section's body lines (lists, paragraphs) to HTML."""
+    """Render a section's body lines (lists, paragraphs, inline figures) to HTML.
+
+    An image on its own line — `![credit](path-or-url)` — becomes a styled inline
+    figure (embedded, sized to the column, with the credit/caption beneath). This
+    lets ANY section carry photos, not just the hero Photo-of-the-Month slot."""
     out = []
     buf_list = []
     buf_para = []
@@ -176,6 +199,14 @@ def render_block(lines):
         s = line.strip()
         if not s:
             close_list(); close_para(); continue
+        fig = _FIG_RE.match(s)
+        if fig:
+            close_list(); close_para()
+            credit, src = fig.group(1).strip(), fig.group(2).strip()
+            cap = f'<figcaption>{inline_md(credit)}</figcaption>' if credit else ""
+            out.append(f'<figure class="inline-photo">'
+                       f'<img src="{_embed_image(src)}" alt="{html.escape(credit)}">{cap}</figure>')
+            continue
         li = re.match(r"^[-*]\s+(.*)", s)
         if li:
             close_para()
@@ -206,19 +237,7 @@ def render_photo(inner_lines):
         elif s.lower().startswith("caption:"):
             caption = s.split(":", 1)[1].strip()
     if img:
-        # A local file path won't load in Browserless (no filesystem access) —
-        # embed it as a data URI. Remote https URLs are used as-is.
-        if not img.lower().startswith(("http://", "https://", "data:")):
-            path = img if os.path.isabs(img) else os.path.join(DRAFT_DIR, img)
-            if not os.path.isfile(path):
-                path = os.path.join(HERE, img)  # fallback
-            if os.path.isfile(path):
-                ext = os.path.splitext(path)[1].lstrip(".").lower()
-                mime = "jpeg" if ext in ("jpg", "jpeg") else ext
-                with open(path, "rb") as f:
-                    b64 = base64.b64encode(f.read()).decode()
-                img = f"data:image/{mime};base64,{b64}"
-        frame = f'<div class="frame"><img src="{img}" alt="Photo of the Month"></div>'
+        frame = f'<div class="frame"><img src="{_embed_image(img)}" alt="Photo of the Month"></div>'
     else:
         frame = ('<div class="frame">Photo / Video of the Month goes here<br>'
                  '<span style="font-size:8.5pt">(drop an image URL in the section and re-render, or crop to fit)</span></div>')

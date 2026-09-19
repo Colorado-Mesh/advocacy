@@ -67,8 +67,19 @@ recurring ones). Each section maps to a CSS class `s-<key>` + a badge.
    announcements, community reminders.
 4. **📅 Events & Meetups** (`s-events`) — hamfests, club meetings, presentations,
    nets to attend. Include date/time/place.
-5. **📸 Photo / Video of the Month** (`s-photo`) — fixed-size media slot(s) +
+5. **📸 Photo / Video of the Month** (`s-photo`) — the hero image slot +
    caption/credit. Video = a still/thumbnail + a link.
+
+> **Use photos generously.** Beyond the hero slot, **any section can carry inline
+> photos**. Put a markdown image on its own line inside a section:
+> `![credit / caption](photos/name_web.jpg)` and it renders as a styled figure
+> (embedded, sized to the column, credit beneath). A repeater build in a protocol
+> section, a spotlighted node, a summit deployment in the Story — pictures add a
+> lot and there's no reason not to. Source them with `tools/fetch-photos.py`
+> (downloads image attachments + builds a contact sheet to pick from). Always
+> credit the poster; photos are gitignored until credit/permission is settled,
+> and only the chosen images ship embedded in the PDF.
+
 6. **PROTOCOL SECTIONS** — the heart of the expanded newsletter. Each is a
    full-width lead card with protocol-colored heading, then its items:
    - **📶 Meshtastic** (`s-mt`, green) — e.g. *MediumFast rollout in Denver*,

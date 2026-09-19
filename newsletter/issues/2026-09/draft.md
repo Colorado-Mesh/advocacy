@@ -68,6 +68,10 @@ New here, or still juggling separate apps? The community maintains **Mesh Client
 
 Shout-out to **Iguy**, who stood up a brand-new repeater near Lexington and Union in Colorado Springs — balcony-mounted, solar plus battery, at 6,810 ft. That "just put one up and see what happens" energy is exactly how the mesh grows, one rooftop at a time. And a nod to **Zeva**, whose fingerprints are all over this cycle: region definitions, observer onboarding, config tooling, and a steady stream of technical help in the channels. Welcome to the map, Iguy — and thanks, Zeva.
 
+![beala's hand-built 900 MHz bandpass filter (#projects-and-builds)](photos/filter_web.jpg)
+
+Bonus build spirit of the month: beala hand-fabricated a 900 MHz bandpass filter from a PCB and copper tape — the VNA showed a real filter, just with (beala's words) a hilarious 33 dB of insertion loss. Not shippable yet, but exactly the kind of tinkering that makes this community fun.
+
 ## Around the Web
 
 - beala's writeup on the FCC and using 500 kHz bandwidth — a genuinely good technical deep-dive: https://beala.substack.com/p/the-fcc-want-me-to-use-more-bandwidth

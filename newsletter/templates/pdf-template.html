@@ -97,6 +97,13 @@
     border-bottom:1px dashed var(--edge); font-size:9.2pt; }
   .s-wiki li:last-child,.s-web li:last-child{ border-bottom:none; }
 
+  /* Inline photos — images embedded inside ANY section body */
+  figure.inline-photo{ margin:6px 0 8px; }
+  figure.inline-photo img{ width:100%; border-radius:6px; border:1px solid var(--edge);
+    display:block; }
+  figure.inline-photo figcaption{ font-size:8pt; color:var(--text-dim);
+    font-style:italic; margin-top:3px; }
+
   /* Photo / Video of the Month */
   .s-photo .frame{ width:100%; aspect-ratio:16/9; border:2px dashed #2f5a86;
     border-radius:6px; background:rgba(255,255,255,.03); display:flex;

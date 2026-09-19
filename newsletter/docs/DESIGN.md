@@ -77,8 +77,14 @@ recurring ones). Each section maps to a CSS class `s-<key>` + a badge.
 > section, a spotlighted node, a summit deployment in the Story — pictures add a
 > lot and there's no reason not to. Source them with `tools/fetch-photos.py`
 > (downloads image attachments + builds a contact sheet to pick from). Always
-> credit the poster; photos are gitignored until credit/permission is settled,
-> and only the chosen images ship embedded in the PDF.
+> credit the poster.
+>
+> **Photo file convention (important for git):** name the images you actually
+> publish `*_web.jpg` / `*_web.png` and reference *those* in the draft. The
+> `.gitignore` **commits `*_web.*` images** (they ship in the PDF and the markdown
+> needs them to preview on GitHub) but **keeps the full-size source photos and the
+> `contact-sheet.html` private**. If you reference a non-`_web` filename it won't
+> be committed and the markdown will show a broken image for reviewers.
 
 6. **PROTOCOL SECTIONS** — the heart of the expanded newsletter. Each is a
    full-width lead card with protocol-colored heading, then its items:

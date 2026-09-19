@@ -93,10 +93,17 @@ def main():
     md = open(args.draft, encoding="utf-8").read()
     secs = sections(md)
 
+    # The Sources / Further Reading section references everything by design —
+    # exclude it from cross-section comparison so it doesn't false-positive.
+    def is_sources(h):
+        return bool(re.search(r"source|further reading|reference", h, re.I))
+
     # build (section, sentence, tokenset, distinctive-set)
     entries = []
     url_map = defaultdict(list)
     for head, body in secs:
+        if is_sources(head):
+            continue
         for u in urls(body):
             url_map[u].append(head)
         for s in sentences(body):

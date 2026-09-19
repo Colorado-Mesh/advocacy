@@ -22,10 +22,13 @@ Future issues scope to the single prior month.
 - **A community reminder on airtime etiquette.** As the network grows, the public channels saw a spike in automated traffic — bots broadcasting every few seconds, plus the occasional commercial or crypto spam. Rin (R-4) asked everyone to keep automated messages to no more than once every few hours (a once-a-morning weather post is fine; every 30 minutes is not), and to keep commercial broadcasts off the public channels entirely. LoRa airtime is tiny and shared by everyone, so a little restraint keeps the whole mesh usable.
 - **A community configuration tool consolidation.** The group standardized on https://tools.meshcore.coloradomesh.org as the primary config tool and deprecated the older site, streamlining how people set up and manage nodes.
 - **A town hall may be in the works.** Zeva floated the idea of an online town hall to make up for the lack of recent in-person gatherings, and JohnnyW5KV has been vocal about wanting regular meetups. Nothing's scheduled yet — but if the interest is there, say so in the channels and help shape the format.
+- **Coverage keeps pushing west.** More repeaters are going up around Grand Junction and the western slope, steadily filling in a part of the state that was thin not long ago. If you're out that way, an observer or a well-placed node goes a long way — coordinate in [#western-slope](https://discord.com/channels/1436156966648152271/1436159632090333304).
+- **New areas, more voices.** Traffic has been strong across the regional channels, and the community keeps carving out new regional homes as the map fills in. Whichever corner of Colorado you're in, there's probably a channel for it now.
 
 ## Events & Meetups
 
-- **BARCFest — October 4 (Boulder Amateur Radio Club).** Colorado Mesh is planning to attend BARCFest, the Boulder Amateur Radio Club's hamfest. It's a great chance to meet folks behind the callsigns in person — and there's been talk of asking BARC about hosting a mesh repeater on one of their tower sites, so it could be more than a social visit. Details: https://barcw0dk.wordpress.com
+- **BARCFest — October 4 (Boulder Amateur Radio Club).** Colorado Mesh has **two tables reserved** at BARCFest, the Boulder Amateur Radio Club's hamfest — come find us, meet the people behind the callsigns, and see the gear in person. There's also been talk of asking BARC about hosting a mesh repeater on one of their tower sites, so it may be more than a social visit. Details: https://barcw0dk.wordpress.com
+- **We had a strong showing at the RMHAM Summer Swapfest** back in August — a good turnout at our tables and a lot of great conversations with folks new to the mesh. Thanks to everyone who staffed it.
 - **Parker Radio Association** held its monthly meeting on September 7 with a presentation on AllStar (via JohnnyW5KV). Keep an eye on announcements for the next one.
 - **Weekly Net — every Thursday.** There's no dedicated channel: just post to the MeshCore Public channel any time on Thursday and you're checked in. New this cycle, Old Man Malice wired the net into MeshWars so your check-in earns credit there too.
 
@@ -38,19 +41,26 @@ Caption: On the summit of Mt Blue Sky (14,130 ft), M0TH3R logged which repeaters
 
 - **The MediumFast migration is the big Meshtastic story.** The Denver metro is steadily moving from LongFast to MediumFast for better performance, and Lookout Mountain shifted its presets to nudge people toward MediumFast. Adoption is still uneven — plenty of nodes outside the metro remain on LongFast, and there's healthy discussion about the range tradeoffs — so check what your area is actually running before you switch. Legacy LongFast bridging is being wound down. (Runr, TickleMeTemplar, nwithan8) https://coloradomesh.org/news/mediumfast-changeover
 - **A cross-protocol bridge experiment.** nwithan8 ran a live test bridging Meshtastic (LongFast) and MeshCore (Public) in the Denver area to see what actually crosses between the networks. The finding: Meshtastic traffic in range was light enough that there wasn't much worth bridging — useful data for how (and whether) to link the two going forward.
+- **Firmware fix worth updating for.** A Meshtastic firmware update this cycle addressed a man-in-the-middle issue — a good reason to make sure your nodes are current. Discussion in [#meshtastic](https://discord.com/channels/1436156966648152271/1456820557176766556).
+- **Know your presets.** Alongside MediumFast, there was ongoing talk about LongTurbo and frequency-slot choices, and what each means for range and congestion. If you're unsure what to run, ask before you flash — the channel is happy to help.
+- **MQTT, maps, and observers.** A lot of quiet-but-useful plumbing work continued: publishing LongFast/MediumFast traffic to MQTT topics, feeding the Meshtastic map and analyzer, and standing up observers. If you want your area on the map, running an observer is the way in.
 
 ## MeshCore
 
 - **We're meshing across state lines.** A working path along I-76 now links the Colorado mesh to Nebraska — an advert from a node near DIA was heard as far as Ogallala. It's a genuine milestone: coverage has grown from a metro network into something that reaches past the state border. (nwithan8)
-- **"Scopes" — defining our regions.** With the network sprawling, a new #scopes channel spun up to plan and standardize MeshCore region definitions. The current proposal leans toward county-based scopes rather than IATA airport codes for better geographic accuracy, and nwithan8 has been coordinating with Nebraska, Utah, and Wyoming so the scheme stays compatible across state lines. Community input is wanted before anything is locked in. (Rin R-4, Zeva, nwithan8)
+- **"Scopes" — defining our regions.** With the network sprawling, a new [#scopes](https://discord.com/channels/1436156966648152271/1544705628142833714) channel spun up to plan and standardize MeshCore region definitions. The current proposal leans toward county-based scopes rather than IATA airport codes for better geographic accuracy, and nwithan8 has been coordinating with Nebraska, Utah, and Wyoming so the scheme stays compatible across state lines. Community input is wanted before anything is locked in. (Rin R-4, Zeva, nwithan8)
 - **Observers are filling in the map.** New observers came online across the state — including Grand Junction — feeding the MQTT relay and the analyzer so we can actually see how the network is growing. A naming tool was added to help operators label nodes to convention, and folks in under-covered regions are encouraged to stand up an observer and report in. (nwithan8, Zeva)
+- **A new MeshCore 500 profile.** Zeva added a MeshCore 500 profile centered on 915 MHz (Philly Mesh has been testing around 915.250) — one more option as we sort out the best local settings. Discussion in [#meshcore](https://discord.com/channels/1436156966648152271/1436175539135058082).
+- **The MQTT relay ties it together.** A service on a VPS reads the MQTT broker and relays MeshCore traffic into Discord, so observers' packets show up where the community can see them — part of what makes the analyzer and maps useful.
+- **Mind the naming convention.** As nodes multiply, sticking to the [MeshCore naming convention](https://wiki.coloradomesh.org/wiki/MeshCore_Naming_Convention) keeps the map legible for everyone — worth a look if you're renaming or standing up a repeater.
 - **New repeaters keep lighting up.** Among them, mrpatzy placed one near Brittany Hill with strong line-of-sight to Denver and the mountains, and more are planned around Grand Junction. Every well-placed node makes the whole mesh more reliable.
 
 ## Reticulum
 
-- **Work on the Lookout bridge.** omgitsgela has been configuring a bridge up on Lookout Mountain — a WiFi repeater for remote access, MQTT bridging, and local mirroring of MediumFast and LongFast, with a second radio planned to add LongFast support. It's a meaningful step toward tying the high-site infrastructure together. Watch the channels for how it comes along.
-- **Reticulum is drawing real interest.** By Rin (R-4)'s rough read, community interest splits about 65% MeshCore, 20% Meshtastic, and 14% Reticulum — and the Reticulum share is growing. danlbarron shared Alpine Linux guides and install scripts to make standing up a node easier, and Zeva posted a Docker config for a NomadNet transport node. Bridging software to link Reticulum with Meshtastic and MeshCore is also in play.
-- **Under-the-hood work continues.** There's ongoing discussion of packet handling and flow control (the Rust implementation uses a bounded queue with flow control; Python's is unbounded), plus a set of Reticulum sidecar patches Rin (R-4) shared for anyone who wants to contribute: https://github.com/Colorado-Mesh/mesh-client/tree/main/reticulum-sidecar/patches
+- **Our RRC hub is drawing people from all over.** The Colorado Mesh **RRC (Reticulum Relay Chat)** server has become a genuinely popular gathering spot — folks are joining from around the world to hang out, and a lot of the Reticulum conversation actually happens *there* rather than in Discord. A big shout-out to **KK4FRN (Alex)** for spinning up the hub. Join us: [#reticulum](https://discord.com/channels/1436156966648152271/1455311030832992298).
+- **You don't need RF gear to try Reticulum.** This is the easiest on-ramp in the whole hobby: with just an internet connection you can join the RRC hub and get a feel for Reticulum before buying a single radio. **M3SHGHØST** added a Reticulum quick-setup guide to the Mesh Client to make that first step painless. Give it a spin and come say hi.
+- **The Mesh Client is a great Reticulum window.** Beyond RRC chat, it now gives you NomadNet browsing — and, new this cycle, *editing* — all in one app. **Runr** and others have been experimenting with a range of Reticulum mobile apps on Android and iOS too, so there are more ways than ever to get on Reticulum from your pocket.
+- **Work on the Lookout bridge.** omgitsgela has been configuring a bridge up on Lookout Mountain — a WiFi repeater for remote access, MQTT bridging, and local mirroring of MediumFast and LongFast, with a second radio planned to add LongFast support. It's a meaningful step toward tying the high-site infrastructure together.
 
 ## Get the Mesh Client
 
@@ -64,6 +74,8 @@ New here, or still juggling separate apps? The community maintains **Mesh Client
 
 **We need Reticulum full repeaters in high spots — build yours now!** High-elevation nodes are what turn scattered coverage into a real network, and Reticulum full transport nodes on ridges and rooftops are exactly where we're thin. If you've got a good vantage point, tower access, or a solar setup you've been meaning to deploy, this is the single highest-leverage thing you can do for the mesh right now. Ask in the channels — budt W0RMT and others have offered to help with repeater setup, and the wiki has the configuration docs.
 
+**Run an observer in your area — especially outside the metro.** Observers are how a region gets onto the map and the analyzer. If you're in a corner of the state that looks empty on the map, that's often just because nobody's reporting from there yet. The wiki has a [guide to running an observer](https://wiki.coloradomesh.org/wiki/MeshCore_MQTT), and it's a low-effort, high-value way to contribute.
+
 ## Community Spotlight
 
 Shout-out to **Iguy**, who stood up a brand-new repeater near Lexington and Union in Colorado Springs — balcony-mounted, solar plus battery, at 6,810 ft. That "just put one up and see what happens" energy is exactly how the mesh grows, one rooftop at a time. And a nod to **Zeva**, whose fingerprints are all over this cycle: region definitions, observer onboarding, config tooling, and a steady stream of technical help in the channels. Welcome to the map, Iguy — and thanks, Zeva.
@@ -72,11 +84,15 @@ Shout-out to **Iguy**, who stood up a brand-new repeater near Lexington and Unio
 
 Bonus build spirit of the month: beala hand-fabricated a 900 MHz bandpass filter from a PCB and copper tape — the VNA showed a real filter, just with (beala's words) a hilarious 33 dB of insertion loss. Not shippable yet, but exactly the kind of tinkering that makes this community fun.
 
+More folks who moved the mesh forward this cycle: **JohnnyW5KV**, who finished a solar install and a chimney-mast setup for a Station G3 and has been a fixture troubleshooting repeaters; **EnderW**, who's been building out the northwest corner of the state; and **nightcrawler**, who shared RF sweep results and custom repeater firmware. The mesh grows on exactly this kind of hands-on effort — thank you all.
+
 ## Around the Web
 
 - beala's writeup on the FCC and using 500 kHz bandwidth — a genuinely good technical deep-dive: https://beala.substack.com/p/the-fcc-want-me-to-use-more-bandwidth
 - JohnnyW5KV's video reviews of mesh gear (the PeakMesh Climber, among others) on YouTube.
 - A new coloradomesh.org news page on the 2-byte path changeover is in progress (KFØUFO - Andrew) — https://coloradomesh.org/news/2-byte
+- Colorado MeshCore analyzer & tools — network stats, beacon data, contact-pack downloads, and range checks: https://analyzer.meshcore.coloradomesh.org and https://tools.meshcore.coloradomesh.org
+- Setting up Reticulum infra? Zeva shared a Docker config for a NomadNet transport node in [#reticulum](https://discord.com/channels/1436156966648152271/1455311030832992298) — a handy starting point.
 
 ## Story of the Month: Meshing the Divide
 

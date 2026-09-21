@@ -29,7 +29,14 @@
 # --- per-issue working scratch that isn't for publication ---
 **/items-list.md
 **/PICK-LIST.md
-**/photos/
+# Photos: keep the raw source dump + contact sheet PRIVATE, but DO commit the
+# web-sized images an issue actually publishes (they ship in the PDF anyway and
+# the markdown draft needs them to preview). Selected images are named *_web.*.
+**/photos/contact-sheet.html
+**/photos/*.jpg
+**/photos/*.png
+!**/photos/*_web.jpg
+!**/photos/*_web.png
 
 # --- python / os cruft ---
 __pycache__/

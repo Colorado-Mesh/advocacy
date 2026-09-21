@@ -59,6 +59,8 @@ _PATHS = {
     # app window (mesh-client)
     "app":    '<rect x="3" y="4" width="18" height="16" rx="2"/>'
               '<path d="M3 8h18"/><circle cx="6" cy="6" r=".6"/><circle cx="8.5" cy="6" r=".6"/>',
+    # wrench (gear & firmware)
+    "wrench": '<path d="M15 4a4 4 0 0 0-5.2 5.2L4 15v5h5l5.8-5.8A4 4 0 0 0 20 9l-3 3-2-2 3-3a4 4 0 0 0-3-3z"/>',
     # wave/hand (signoff)
     "wave":   '<path d="M6 12V7a1.5 1.5 0 0 1 3 0v4M9 11V5a1.5 1.5 0 0 1 3 0v6'
               'M12 11V6a1.5 1.5 0 0 1 3 0v6M15 12V8a1.5 1.5 0 0 1 3 0v6a6 6 0 0 1'
@@ -74,6 +76,7 @@ _SECTION_ICON = {
     "s-mt":     "mt",
     "s-mc":     "mc",
     "s-rns":    "rns",
+    "s-gear":   "wrench",
     "s-market": "tag",
     "s-cta":    "cta",
     "s-spot":   "star",

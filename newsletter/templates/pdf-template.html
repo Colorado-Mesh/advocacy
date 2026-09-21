@@ -102,14 +102,14 @@
 
   /* Inline photos — images embedded inside ANY section body */
   figure.inline-photo{ margin:6px 0 8px; }
-  figure.inline-photo img{ width:100%; border-radius:6px; border:1px solid var(--edge);
-    display:block; }
+  figure.inline-photo img{ max-width:100%; max-height:340px; width:auto; height:auto;
+    border-radius:6px; border:1px solid var(--edge); display:block; margin:0 auto; }
   figure.inline-photo figcaption{ font-size:8pt; color:var(--text-dim);
     font-style:italic; margin-top:3px; }
   /* two+ consecutive images -> a tight side-by-side row */
-  .photo-row{ display:flex; gap:8px; margin:6px 0 8px; break-inside:avoid; }
+  .photo-row{ display:flex; gap:8px; margin:6px 0 8px; break-inside:avoid; align-items:flex-start; }
   .photo-row figure.inline-photo{ flex:1 1 0; min-width:0; margin:0; }
-  .photo-row figure.inline-photo img{ height:150px; width:100%; object-fit:cover; }
+  .photo-row figure.inline-photo img{ width:100%; height:auto; object-fit:contain; }
 
   /* Photo / Video of the Month — at least 1:1 (square). Explicit equal
      width/height guarantees the square in Chrome's print engine (aspect-ratio

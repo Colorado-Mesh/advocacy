@@ -37,7 +37,7 @@ Future issues scope to the single prior month.
 
 ## Photo / Video of the Month
 
-![Mt Blue Sky summit](photos/bluesky_b_web.jpg)
+![Mt Blue Sky summit](photos/bluesky_b_square_web.jpg)
 Caption: On the summit of Mt Blue Sky (14,130 ft), M0TH3R logged which repeaters heard — and were heard by — a node at the top of Colorado. Photo: M0TH3R, Aug 31. [Two landscape options (B/C) and a portrait (A) are in issues/2026-09/photos/contact-sheet.html — open it in a browser to switch.]
 
 ## Meshtastic

@@ -253,7 +253,10 @@ def render_photo(inner_lines):
         elif s.lower().startswith("caption:"):
             caption = s.split(":", 1)[1].strip()
     if img:
-        frame = f'<div class="frame"><img src="{_embed_image(img)}" alt="Photo of the Month"></div>'
+        # The published hero image is pre-cropped square; just cap its display size.
+        frame = ('<div class="frame">'
+                 f'<img src="{_embed_image(img)}" alt="Photo of the Month" '
+                 'style="width:340px;max-width:100%;height:auto;display:block"></div>')
     else:
         frame = ('<div class="frame">Photo / Video of the Month goes here<br>'
                  '<span style="font-size:8.5pt">(drop an image URL in the section and re-render, or crop to fit)</span></div>')

@@ -111,13 +111,12 @@
   .photo-row figure.inline-photo{ flex:1 1 0; min-width:0; margin:0; }
   .photo-row figure.inline-photo img{ height:150px; width:100%; object-fit:cover; }
 
-  /* Photo / Video of the Month — full-width hero banner. Cap the height so it
-     doesn't eat a whole page; the image crops to fill the banner. */
-  .s-photo .frame{ width:100%; height:230px; border:2px dashed #2f5a86;
-    border-radius:6px; background:rgba(255,255,255,.03); display:flex;
-    align-items:center; justify-content:center; text-align:center; overflow:hidden;
-    color:var(--text-dim); font-size:8.5pt; padding:8px; margin:2px 0 5px; }
-  .s-photo .frame img{ width:100%; height:100%; object-fit:cover; border-radius:5px; }
+  /* Photo / Video of the Month — at least 1:1 (square). Explicit equal
+     width/height guarantees the square in Chrome's print engine (aspect-ratio
+     with auto width is unreliable there); centered, image crops to fill. */
+  .s-photo .body{ text-align:center; }
+  .s-photo .frame{ display:inline-block; margin:2px auto 5px; border:2px dashed #2f5a86;
+     border-radius:6px; overflow:hidden; line-height:0; }
   .s-photo .cap{ font-size:8.2pt; color:var(--text-dim); font-style:italic; }
 
   /* sign-off */

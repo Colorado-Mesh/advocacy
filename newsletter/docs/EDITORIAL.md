@@ -8,13 +8,21 @@ and read by a human. This doc is the process.
 
 1. **Accuracy over speed.** A wrong callsign, a misattributed build, or a
    garbled fact erodes trust. When unsure, cut it or mark it `[CONFIRM]`.
-2. **Every claim is sourced.** If we say "X happened," we can point to where —
-   a Discord message, a wiki edit, a repo, a post. The Sources page and inline
-   links exist so readers can verify and go deeper.
-3. **People are credited, and never exposed.** Use handles/callsigns exactly.
+2. **Every claim is sourced — from a PUBLIC channel.** If we say "X happened," we
+   can point to where — a public Discord message, a wiki edit, a repo, a post.
+3. **Internal/admin channels are background only — never quoted.** Channels like
+   `#mesh-ops`, `#scopes`, `#mesh-planning`, and `#advocacy` tell us what the
+   admins are working on and what matters, but their discussion is NOT for
+   publication. We read them for context and to know what to ask about publicly;
+   we never lift a topic, quote, or fact from them into the newsletter. The
+   gatherer still pulls them, but triage routes their candidates to a
+   `candidates-background.json` (do-not-publish) bucket via `discord-internal.txt`.
+   If a topic exists only in an internal channel, confirm it was also said
+   publicly before including it.
+4. **People are credited, and never exposed.** Use handles/callsigns exactly.
    Never publish anyone's real name, address, or private details beyond what
    they've already shared publicly.
-4. **Humans decide what ships.** The pipeline gathers, scores, and drafts. It
+5. **Humans decide what ships.** The pipeline gathers, scores, and drafts. It
    never posts. A person — ideally with an admin — approves every issue.
 5. **The voice stays consistent.** Always compose against `voice-guide.md`.
 

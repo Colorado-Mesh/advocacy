@@ -1,0 +1,21 @@
+# Discord INTERNAL / BACKGROUND channels.
+#
+# These channels ARE still gathered (they tell us what admins are working on and
+# what matters), but their content is BACKGROUND ONLY — it must NEVER be quoted,
+# sourced, or published in the newsletter. Use them to understand context and to
+# know what to ask about publicly; never to lift a topic/quote verbatim.
+#
+# This is DIFFERENT from discord-exclude.txt (which drops channels from the
+# gather entirely). Internal channels are read, but their candidates are routed
+# to a "background / do-not-publish" bucket, not the publishable pick-list.
+#
+# One channel ID per line; text after the ID and # comments ignored.
+
+1471001300001886411   mesh-ops           # ops/admin coordination
+1544705628142833714   scopes             # internal region-definition planning
+1436164704895762564   mesh-planning      # node/deployment planning (internal coordination)
+# advocacy = where WE plan the newsletter itself — never quote it
+# (fill in advocacy channel ID if/when confirmed)
+
+# NOTE: leadership-chat and org-planning are in discord-exclude.txt (dropped entirely).
+# TODO confirm with Alex: is #emcomm-network-ops public (quotable) or internal?

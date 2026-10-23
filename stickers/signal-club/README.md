@@ -6,9 +6,11 @@ Three high-resolution PNGs for sticker production. Download the original PNG fil
 | --- | --- | --- |
 | [MESH Supply](01-mesh-supply.png) | 4,140 × 2,520 px | 4.29 × 2.35 in |
 | [Alpine Frequency](02-alpine-frequency.png) | 3,240 × 3,240 px | 3.34 × 3.34 in |
-| [Good Connections](03-good-connections.png) | 3,465 × 4,365 px | 3.40 × 4.50 in |
+| [Good Connections](03-good-connections.png) | 3,465 × 4,365 px | 3.11 × 3.87 in |
 
 All three files are **transparent RGBA PNGs at 900 ppi**, with the white sticker border included. Transparency is outside the sticker silhouette. The PNG canvases include a small transparent margin; the sizes above describe the sticker silhouette. Scale uniformly if choosing a different finished size.
+
+Good Connections features smaller gloves, curved limbs, an outside-thumb thumbs-up, and an open wave.
 
 ![MESH Supply](01-mesh-supply.png)
 

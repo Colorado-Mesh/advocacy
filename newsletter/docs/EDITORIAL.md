@@ -11,7 +11,7 @@ and read by a human. This doc is the process.
 2. **Every claim is sourced — from a PUBLIC channel.** If we say "X happened," we
    can point to where — a public Discord message, a wiki edit, a repo, a post.
 3. **Internal/admin channels are background only — never quoted.** Channels like
-   `#mesh-ops`, `#scopes`, `#mesh-planning`, and `#advocacy` tell us what the
+   `#mesh-ops`, `#scopes`, and `#advocacy` tell us what the
    admins are working on and what matters, but their discussion is NOT for
    publication. We read them for context and to know what to ask about publicly;
    we never lift a topic, quote, or fact from them into the newsletter. The

@@ -12,97 +12,113 @@ _Top candidates per section shown; the full pool is in the candidates JSON._
 
 ## General News
 
-- [ ] **MeshCore Node Configuration Issue Identified** — User beala reported a configuration issue with the node cc <@785699420201025536>, which is advertising every 2 minutes. The issue was flagged on the MeshCore map at https://map.meshcore.coloradomesh.org/?iata=FNL&regions=northeast-colorado%2Csoutheast-colorado%2Cfront-range%2Ccentral-colorado%2Cwestern-slopes%2Cnorthwest-colorado%2Csouthwest-colorado&tab=Nodes&node=023692bb-014b-413b-a7e0-56eff069ac69.  _(beala · #meshcore 2026-10-08)_
-- [ ] **MeshCore Reach Check Tool Released** — The Colorado Mesh community has released a new tool for checking mesh reach, available at https://github.com/Colorado-Mesh/meshcore-reach-check. This tool is based on the upstream project by yellowcooln at https://github.com/yellowcooln/meshcore-health-check.  _(nwithan8 · #meshcore 2026-10-08)_
-- [ ] **Admin Team Leadership Updates** — Several members of the admin team have stepped down to focus on other priorities, including <@170852206701051904>, <@150458776917377024>, <@1058449491402956821>, <@144172620563087360>, and <@351881179827273739>. The community is also welcoming <@196018858455334912> to the admin team.  _(<@170852206701051904>, <@150458776917377024>, <@1058449491402956821> · #announcements 2026-10-07)_
-- [ ] **Colorado Mesh Monthly Newsletter Published** — The first edition of the Colorado Mesh Monthly newsletter has been released, featuring news and updates from the community. It is available at https://blog.coloradomesh.org/2026/09/21/colorado-mesh-monthly-aug-sept-2026.html.  _(<@219923482694254592> · #announcements 2026-09-22)_
-- [ ] **Weekly Net Activity and Participation Challenges** — nwithan8 noted that there is substantial conversation happening on the Public channel during the weekly net, though participation from outside the region, such as Tennessee, is limited. They are working on addressing this issue.  _(nwithan8 · #weekly-net 2026-10-07)_
-- [ ] **Colorado Emergency Reporting Network Seeks Volunteers** — The Colorado Emergency Reporting Network (CERN) is actively seeking volunteers to support emergency communication efforts. For more information, visit their website at https://co-cern.org/.  _(nwithan8 · #ham-radio 2026-10-08)_
-- [ ] **KFØUFO - Andrew Notes Wiki Sufficiency for Device Information** — KFØUFO - Andrew mentioned that a separate page for listing devices on the Wiki is unnecessary, as the existing Wiki is already comprehensive. This indicates the community's confidence in the current documentation.  _(KFØUFO - Andrew · #wiki 2026-09-24)_
+- [ ] **MeshCore Node Configuration Issue Detected** — User cc reported an issue with the ncbot configuration, which is advertising every 2 minutes. The problem is visible on the MeshCore map at https://map.meshcore.coloradomesh.org/?iata=FNL&regions=northeast-colorado%2Csoutheast-colorado%2Cfront-range%2Ccentral-colorado%2Cwestern-slopes%2Cnorthwest-colorado%2Csouthwest-colorado&tab=Nodes&node=023692bb-014b-413b-a7e0-56eff069ac69.  _(cc, beala · #meshcore 2026-10-08)_
+- [ ] **Leadership Changes in the Admin Team** — Several members of the admin team have stepped down to focus on other priorities, including <@170852206701051904>, <@150458776917377024>, <@1058449491402956821>, <@144172620563087360>, and <@351881179827273739>. The team welcomes <@196018858455334912> as a new addition.  _(<@170852206701051904>, <@150458776917377024>, <@1058449491402956821> · #announcements 2026-10-07)_
+- [ ] **budt W0RMT Works on Documentation and Repository Integration** — budt W0RMT is working on synthesizing discussions and integrating them into the repository, aiming to improve documentation and knowledge sharing within the community. They also shared a link to a potential project related to MeshCoreTracker and MeshcoreToTAK.  _(budt W0RMT · #emcomm-network-ops 2026-10-09)_
+- [ ] **New Short Links for Colorado Mesh** — Colorado Mesh now has a collection of short links managed through the `colome.sh` domain, providing easy access to key resources like the main website, Discord, and the MeshCore map. Visit https://colome.sh for more information.  _(<@170852206701051904> · #announcements 2026-10-10)_
+- [ ] **Colorado Mesh Monthly Newsletter Published** — The first edition of the Colorado Mesh Monthly newsletter is now available, featuring news and updates from the community. It can be accessed at https://blog.coloradomesh.org/2026/09/21/colorado-mesh-monthly-aug-sept-2026.html.  _(<@219923482694254592> · #announcements 2026-09-22)_
+- [ ] **nwithan8 Offers Meshtastic Feeder Node Support** — nwithan8 is seeking a spare radio to deploy a Meshtastic feeder node to the PotatoMesh instance, aiming to improve network coverage and connectivity. They also have a 10 dBi antenna and two Yagis available for rural or high-up installations.  _(nwithan8 · #projects-and-builds 2026-10-23)_
+- [ ] **High Green Dot Numbers Indicate Strong Network Coverage** — nwithan8 noted that most participants in the weekly net have high green dot numbers, indicating their messages are being observed by many nodes across the network, except in isolated areas like Pueblo and the western slopes.  _(nwithan8 · #weekly-net 2026-10-15)_
+- [ ] **Public MeshCore Channels List Updated** — Rin (R-4) reported that the public MeshCore channels list was not found on the wiki and redirected to the Common Channels page. This indicates a potential need for better organization or visibility of public channels.  _(Rin (R-4) · #wiki 2026-10-02)_
 - [ ] _add one:_ 
 
 ## Events & Meetups
 
-- [ ] **Parker Radio Association Chili Cookout** — JohnnyW5KV announced the Parker Radio Association Chili Cookout for members and their families this weekend. The event takes place on 80 acres of land in Franktown. Club membership is $25 per year, and the mesh group has contributed to 5-6 new attendees at PRA meetings.  _(JohnnyW5KV · #ham-radio 2026-10-02)_
-- [ ] **Colorado Mesh Promo Video in Development** — A promo video is being developed to showcase the capabilities of the Colorado Mesh network, including support for multiple protocols, online maps, MQTT, and emergency communications. This video is intended to attract new users and contributors.  _(<@1019232922580045876>, JohnnyW5KV · #emcomm-network-ops 2026-09-24)_
-- [ ] **Repeater Programming in Camper for VHF/UHF** — JohnnyW5KV has decided to program repeaters into his VHF/UHF radio in his camper for use in remote areas of Colorado where cell signal is unreliable. He mentioned tuning into the 'Colorado Connection' net and encountering various transmissions.  _(JohnnyW5KV · #ham-radio 2026-10-08)_
-- [ ] **New MeshCore Node Setup in Hesperus** — UtahSTI, a new member in Hesperus, shared details about setting up two nodes: a solar repeater (DRO-HESP-TRPPRS-RE-3A9C) and an MQTT observer (DRO-HESP-TRPPRS-OB-7A0B). The repeater is moving to the roof with a 5.8 dBi antenna.  _(UtahSTI · #western-slope 2026-10-08)_
-- [ ] **Observer Participation and Wardriving** — nwithan8 thanked an observer for reporting data and mentioned ongoing efforts to onboard DRO on MeshMapper for wardriving in new locations. This helps in mapping mesh coverage and bridging mesh islands.  _(nwithan8 · #western-slope 2026-10-08)_
-- [ ] **Zeva Heading to Grand Junction for Mesh Mapping** — Zeva plans to head to Grand Junction this weekend to conduct mesh mapping, aiming to gather extensive coverage data. This is part of ongoing efforts to improve network coverage and data collection.  _(Zeva · #wardriving 2026-09-29)_
-- [ ] **Zeva Planning to Visit Western Slope for Mesh Networking** — Zeva is excited to visit the western slope and plans to meet new contacts during their trip. They mentioned staying near Moab and are looking forward to expanding the mesh network in the area.  _(Zeva · #western-slope 2026-10-01)_
-- [ ] **Weekly Net Check-In Rules** — nwithan8 clarified that any message on Public between 12 a.m. and 11:59 p.m. on Thursdays counts as a check-in for the weekly net, even if the event is only an hour long on Discord.  _(nwithan8 · #weekly-net 2026-10-09)_
+- [ ] **Parker Radio Association Chili Cookout** — The Parker Radio Association is hosting a Chili Cookout for members and their families this weekend on 80 acres of land in Franktown. Club membership is $25 per year, and the event has attracted 5-6 new members from the Colorado Mesh community. More info at www.parkerradio.org.  _(JohnnyW5KV · #ham-radio 2026-10-02)_
+- [ ] **MeshCore Map and Coverage Insights** — The MeshCore map is being used to track node coverage and connectivity, with users like Gathorn sharing their setup and observations. The map is a valuable tool for understanding network performance and planning improvements.  _(Gathorn, nwithan8 · #meshcore 2026-10-08)_
+- [ ] **Budt Deploys Mobile Repeater at Adams Five Star Stadium** — Budt W0RMT announced plans to deploy a mobile repeater (DEN-MOBILE-RM-2818) at Adams Five Star stadium in Thornton for a marching band competition. This event is a key opportunity for mesh network testing and coverage.  _(budt W0RMT · #meshcore 2026-09-26)_
+- [ ] **Letter Sent to Rocky Mountain National Park for Mesh Repeater** — JohnnyW5KV sent a letter to the superintendent of Rocky Mountain National Park requesting the installation of a mesh repeater. They mentioned the importance of having such infrastructure for communication in the area.  _(JohnnyW5KV · #backcountry-general 2026-10-04)_
+- [ ] **Meshcore Coverage Map Updated for Better Message Delivery** — A new coverage map for MeshCore has been shared, highlighting areas with better message delivery. The map is accessible via the provided link and is useful for users looking to optimize their mesh communication.  _(cj · #general 2026-10-17)_
+- [ ] **Zeva Testing New Solar Input Setup for Car Node** — Zeva is working on figuring out solar input for their car node, planning to use the wedge area through a dedicated hole. They are still unsure about adding a gland, but the setup is progressing.  _(Zeva · #hardware 2026-09-29)_
+- [ ] **Weekly Net Check-In and Map Updates** — nwithan8 is monitoring the weekly net check-in and has provided a link to the MeshCore map for tracking coverage. The community is encouraged to check in and report any issues with connectivity.  _(nwithan8 · #weekly-net 2026-10-09)_
+- [ ] **Nwithan8 Thanks Observer for Mesh Data** — Nwithan8 thanked an observer for reporting data and mentioned efforts to onboard DRO on MeshMapper to enable wardriving in new locations. This helps in mapping and bridging mesh islands.  _(nwithan8 · #western-slope 2026-10-08)_
 - [ ] _add one:_ 
 
 ## Meshtastic
 
-- [ ] **Mesh Emergency Communications Protocol (MECP) Support Added** — Support for the Mesh Emergency Communications Protocol (MECP) has been added to the mesh-client. This integration allows for emergency communications and is part of a broader effort to support various protocols. More details and test builds are available at https://mecp.radio/ and https://github.com/Colorado-Mesh/mesh-client/actions/runs/35866220321.  _(<@1019232922580045876> · #mesh-client 2026-09-23)_
-- [ ] **MeshMapper Questions Raised About Wardriving Practices** — Brian C Stradale asked about the practices involved in using MeshMapper, specifically whether wardriving is done from cars or on foot, and the distinction between DEAD and DISC statuses on the map. These questions highlight the community's engagement with mapping and network coverage.  _(brian_c_stradale · #wardriving 2026-10-06)_
-- [ ] **Meshtastic Traffic Monitoring Updated** — nwithan8 reported that the Meshtastic traffic monitoring system is now collecting and reporting actual message traffic. It captures LongFast and MediumFast traffic from the official Meshtastic MQTT broker on the topic `msh/US/CO`, though LongTurbo is still pending default status.  _(nwithan8 · #meshtastic 2026-09-23)_
-- [ ] **Solar Input and Mount Design** — ZRIN (R-4) shared updates on the solar input design for the magnetic car mount, noting that the hole for solar input will be up to the user to seal if necessary. A 25.4mm SMA bulkhead flange adapter was created, though N-Type adapters are recommended to be purchased separately.  _(ZRIN (R-4) · #hardware 2026-09-30)_
-- [ ] **Custom Firmware Build for MeshCore** — beala shared a custom build of MeshCore that disables both the LED and buzzer, available at https://github.com/beala/MeshCore/releases/tag/t1000e-v1.17.1. This build is useful for users looking to reduce power consumption or simplify hardware.  _(beala · #hardware 2026-09-23)_
-- [ ] **User Suggests UX Improvement for Nomad App** — Runr proposed adding a 'favorite' star to the Nomad app interface to improve user experience, specifically for quickly favoriting pages without scrolling through long lists. This suggestion highlights the community's interest in refining tools for better usability.  _(Runr · #mesh-client 2026-10-01)_
-- [ ] **Mesh Client Update Generates Positive Feedback** — User FuzzyKaos shared their enthusiasm for the new Mesh Client, highlighting the significant improvements and overall positive experience with the update. This feedback reflects the community's appreciation for ongoing development and enhancements to the platform.  _(FuzzyKaos · #general 2026-10-03)_
-- [ ] **nwithan8 Discusses Network Latency and Device Performance** — nwithan8 calculated that 10 nines (99.99999999%) of uptime equates to 315 ms of downtime per year, highlighting the importance of network reliability. They also noted that the new firmware may significantly impact device range, with results still being evaluated.  _(nwithan8 · #colorado-springs 2026-09-16)_
-- [ ] **Lookout Mountain Bridge Progress** — omgitsgela reported that the Lookout Mountain bridge is up but only partially functional. A LongFast node has been installed, and there is a WiFi bridge to facilitate connectivity between LongFast and MediumFast, with plans to echo to MQTT for full integration.  _(omgitsgela · #meshtastic 2026-10-02)_
-- [ ] **Meshtastic Relay and MQTT Gateway Details Shared** — nwithan8 explained that the Meshtastic relay reads from the public MQTT broker. Messages reach the broker via either a physical LoRa device in Commerce City or through the Client Proxy feature on the mobile app, which uses the phone's internet connection.  _(nwithan8 · #meshtastic 2026-09-25)_
-- [ ] **New Protocol Development for Mesh-Client** — The community is working on adding support for a new protocol from the RFOXiA BLE module, which is a long-range Bluetooth LE system that also supports mesh networking. The manufacturer is sending hardware to enable this new protocol in the mesh-client.  _(<@1019232922580045876>, <@&1436158252437209209>, <@&1470998047642222642> · #mesh-client 2026-10-05)_
-- [ ] **MediumFast Traffic Integration with MQTT** — nwithan8 mentioned that any MediumFast traffic reaching a Potato feeder node would also be fed to MQTT, provided the message is tagged for publishing. They also noted that LongTurbo messages should appear on the map as soon as they reach the broker.  _(nwithan8 · #meshtastic 2026-09-23)_
+- [ ] **Call for Testing Next Mesh-Client Release** — The community is being asked to test the next release of the mesh-client, which includes significant changes under the guise of 'Security'. The release notes are available at https://mdbin.sivaramp.com/p/wncyvkj1, and the latest test image can be found at https://github.com/Colorado-Mesh/mesh-client/actions/runs/3818041.  _(<@&1491567543905681498>, <@668269350754713609> · #mesh-client-dev 2026-10-11)_
+- [ ] **Meshtastic and MeshCore Integration Challenges** — There have been discussions about the integration of Meshtastic and MeshCore, with some users expressing concerns about the competition between the two protocols. Rin (R-4) has noted that Meshtastic is trying to compete with MeshCore by implementing new features, which has led to some speculation about the future of both protocols.  _(Rin (R-4) · #meshtastic 2026-10-17)_
+- [ ] **Another Call for Testing Next Mesh-Client Release** — A second call for testing the next release of the mesh-client has been made, focusing on setting migrations and DB upgrades. The changelog is available at https://mdbin.sivaramp.com/p/67gq93ce, and the test build can be found at https://github.com/Colorado-Mesh/mesh-client/actions/runs/40241115034.  _(<@&1491567543905681498>, <@668269350754713609> · #mesh-client-dev 2026-10-25)_
+- [ ] **MediumFast as Amplified Repeater for Extended Network Reach** — omgitsgela proposed using MediumFast as an amplified repeater to extend network reach, suggesting that bridging nodes could allow backhauls over MediumFast with local breakouts onto LongFast. This setup could enable super long links and networks by using MediumFast for point-to-point connections and LF for the last mile.  _(omgitsgela · #meshtastic 2026-10-04)_
+- [ ] **MediumFast Adoption and Preset Defaults** — User GoKo in the Denver south suburbs switched to MediumFast as recommended by Colorado Mesh but is not seeing other nodes. JohnnyW5KV noted that most users stick to default settings, which may impact traffic between MediumFast and LongFast. Preset defaults are crucial for network efficiency.  _(GoKo, JohnnyW5KV · #den-south-suburbs 2026-10-27)_
+- [ ] **Meshtastic and TAK Server Integration** — There has been a discussion about switching from Zeva's TAK server to another server. Budt W0RMT is working on the TAK server stuff in the mesh-client and plans to release a signed APK for feedback. The current state of the development is considered stable with a working connection to ATAK.  _(budt W0RMT, Zeva · #tak 2026-10-18)_
+- [ ] **Meshtastic and MeshCore Competition Discussion** — Rin (R-4) has expressed concerns that Meshtastic is trying to compete with MeshCore by implementing new features. This has led to some speculation about the future direction of both protocols, with Rin noting that they have been spoiled by WiFi and have retired their RAK home node.  _(Rin (R-4) · #meshtastic 2026-10-17)_
+- [ ] **Zeva Discusses Mesh Client Development and Future Plans** — Zeva shared updates on the Mesh Client development, including plans to decouple the backend from the user interface and work on a clean-room implementation of `rnsgit` in Rust. They also mentioned testing with multiple radios and focusing on security improvements.  _(Zeva · #mesh-client-dev 2026-10-26)_
+- [ ] **Meshcore-Tak Bridge Update Adds Delivery Receipts and Battery Monitoring** — The meshcore-tak-bridge has been updated to version 0.1.2, introducing delivery receipts for direct messages and battery level monitoring for the radio. The bridge now shows battery percentages on its screen and in notifications, with alerts at 20% and 10%.  _(budt W0RMT · #tak 2026-10-20)_
+- [ ] **Meshtastic and MeshCore Firmware Updates** — Budt W0RMT has released the meshcore-tak-bridge and is planning to work on the TAK server stuff in mesh-client. The development of the bridge has provided insights that can be applied to mesh-client, with the expectation of several PRs in the coming days.  _(budt W0RMT · #mesh-client-dev 2026-10-15)_
+- [ ] **Meshtastic Network Configuration and Performance** — omgitsgela described a setup using a GL-Inet router to serve serial connections and firmware data over Zerotier. They also mentioned that switching to LongTurbo is not recommended due to performance drops, advising to wait for the 3.0 firmware release.  _(omgitsgela · #meshtastic 2026-10-02)_
+- [ ] **Reticulum Integration Progress** — Zeva has successfully set up Reticulum on MeshCore and confirmed that the baseline build works. However, WiFi clients on MeshCore are failing, and testing on Meshtastic is pending. Zeva plans to work on testing and error resolution in the coming week.  _(Zeva · #mesh-client-dev 2026-10-13)_
 - [ ] _add one:_ 
 
 ## MeshCore
 
-- [ ] **MeshCore Software and Map Improvements Discussed** — nwithan8 mentioned plans to deprecate the MeshCore Analyzer and is considering improvements to the map, including a 'Save my favorites' feature and toggling node visibility in live mode. These changes aim to enhance user experience and data visualization.  _(nwithan8 · #meshcore 2026-09-20)_
-- [ ] **MeshCore BBS Setup and Updates** — cj announced that the MeshCore BBS is set up and users can message the coloradomesh.org-bbs user for updates. The #bbs channel is recommended for newsletter and post updates. The BBS is hosted on Reticulum and includes a CLI wizard for setup.  _(cj · #meshcore 2026-09-23)_
-- [ ] **Chicagoland Naming Convention Trial** — The community is trialing the Chicagoland Naming Convention for MeshCore. This includes a personalization block instead of the trailing hash. The community has closely followed the conventions and is adapting them to fit their needs.  _(<@1019232922580045876> · #meshcore 2026-10-05)_
-- [ ] **CoreScope Replacement with Beacon** — The CoreScope instance is being replaced with Beacon due to performance issues. Beacon is a more efficient and intentionally designed application. The transition is expected to improve the overall performance of the meshcore system.  _(<@1019232922580045876> · #meshcore 2026-10-07)_
+- [ ] **MeshCore Firmware and MeshMapper Stale Status Issue** — MeshMapper is classifying repeaters as 'Stale' even when they are actively relaying messages. This is due to MeshMapper looking for adverts within a 24-hour window, while MeshCore firmware 1.16.0+ advertises repeaters every 47 hours. This causes repeaters to toggle between online and stale statuses.  _(CrispyChicken111 · #wardriving 2026-10-27)_
+- [ ] **MeshCore Observer and Repeater Setup Discussion** — There has been discussion about setting up MeshCore observers and repeaters in the Western Slope region. Some users are unsure if their firmware allows for repeater/observer functionality and whether internet access is required. A user in Grand Junction is seeking help to host an observer.  _(nwithan8, Zeva · #western-slope 2026-09-22)_
+- [ ] **Replacing CoreScope with Beacon** — nwithan8 is planning to replace the CoreScope instance with Beacon due to performance issues. Beacon is a more efficient and intentionally designed application. The CoreScope instance is now redirecting to Beacon at https://map.meshcore.coloradomesh.org.  _(nwithan8 · #meshcore 2026-10-07)_
+- [ ] **MeshCore Firmware and Community Contributions** — Nightcrawler implemented a custom repeater firmware for MeshCore, available on GitHub. cj and Runr provided resources and support, including the advocacy repo and wiki for further information. Budt W0RMT is working on integrating MECP decoding into meshcore-tak-bridge for ATAK nodes.  _(nightcrawler, cj, Runr · #meshcore 2026-10-12)_
+- [ ] **Active Observers in Durango** — An observer in Durango has been tracking a significant amount of traffic, indicating high activity in the area. The map can be accessed at https://map.meshcore.coloradomesh.org/?tab=Packets&iata=DRO.  _(nwithan8 · #meshcore 2026-10-23)_
+- [ ] **Trial of Chicagoland Naming Convention** — Ed has initiated a trial of the Chicagoland Naming Convention, closely following the conventions of Colorado Mesh with some deviations, such as replacing the trailing hash with a 'personalization block'.  _(Ed · #meshcore 2026-10-05)_
+- [ ] **Long-Distance Node Connections Observed on Coverage Map** — flavonoid noticed long-distance connections on the MeshCore coverage map, such as from Coal Creek to Castle Rock, raising questions about how these links are achieved without intermediate nodes.  _(flavonoid · #meshcore 2026-09-23)_
+- [ ] **Custom Colorado Mesh Firmware Discussion** — Zeva suggested that it might be time to develop a custom Colorado Mesh firmware with enhanced features, indicating a potential direction for future development and improvements.  _(Zeva · #meshcore 2026-10-12)_
+- [ ] **MeshCore Repeater Setup Guide Updated** — Rachel updated the MeshCore wiki with best practices for configuring repeaters based on their location, providing a resource for optimizing network performance.  _(Rachel · #meshcore 2026-09-21)_
+- [ ] **MeshCore Observer Firmware Discussion** — Gshep86 inquired about the official status of the meshcore-observer-firmware on GitHub, indicating interest in its role within the MeshCore ecosystem.  _(Gshep86 · #meshcore 2026-10-12)_
+- [ ] **Wiki Feedback on Device Pages** — KFØUFO - Andrew suggested that a separate page for device listings was unnecessary, as the existing wiki was deemed sufficient.  _(KFØUFO - Andrew · #wiki 2026-09-24)_
+- [ ] **Discussion on Ham Radio and Doxxing Concerns** — Zeva mentioned being doxxed enough to delay pursuing a Ham Radio license, indicating privacy concerns within the community.  _(Zeva · #ham-radio 2026-09-23)_
 - [ ] _add one:_ 
 
 ## Reticulum
 
-- [ ] **Reticulum Audits Completed with No Violations Found** — Rin (R-⁰) confirmed that both Reticulum audits were completed with no violations found. The audits confirmed that RNS code is not vendored in mesh-client, and the sidecar uses independent Rust implementations, ensuring compliance with licensing conditions.  _(Rin (R-⁰) · #reticulum 2026-10-09)_
-- [ ] **Reticulum BBS and Mobile Posting Demonstrated** — Cj and Budt W0RMT showcased the Reticulum BBS, with Budt W0RMT posting from a mobile device using the Columba app through a home transport node. This highlights the community's use of Reticulum for communication and collaboration.  _(cj, budt W0RMT · #reticulum 2026-09-23)_
-- [ ] **Reticulum Client and RSNomad Review** — Rin (R-4) shared that they asked opencode to review a large ranting document and evaluate the mesh client and rsNomad for violations. The results will be shared once the PR is up in the mesh client channel.  _(Rin (R-4) · #reticulum 2026-10-09)_
-- [ ] **Reticulum Server and User Authentication** — There is a discussion about allowing users to create a userid and password for the Reticulum server, which would be easier for retui than for the mesh client due to the presence of a UI, sidecar, and DB.  _(nwithan8 · #reticulum 2026-10-01)_
-- [ ] **Reticulum and RRC Server Updates** — nwithan8 discussed Reticulum and RRC server interactions, noting that they were RRC-ing with nodes to explore Reticulum capabilities. This highlights ongoing experimentation with Reticulum integration.  _(nwithan8 · #general 2026-10-08)_
-- [ ] **Zeva Discusses Python Support for Reticulum Client** — Zeva mentioned that their Rust-only client is looking into adding Python support, inspired by the reticast project. This indicates ongoing efforts to expand the client's capabilities and compatibility.  _(Zeva · #reticulum 2026-09-28)_
-- [ ] **Zeva Explores Webhook Integration for Reticulum** — Zeva is considering integrating webhook support to send posts from Reticulum into the Discord channel. This could enhance communication and automation between the mesh network and Discord.  _(Zeva · #reticulum 2026-09-25)_
+- [ ] **Rin Shares Reticulum Development Insights** — Rin (R-04) shared thoughts on a chapter that serves as a reference for developers and users, noting that it's part of an 'Age of Bullshit Manufacture' equivalent to the Cambrian Explosion. They also mentioned plans to review the document with opencode.  _(Rin (R-04) · #reticulum 2026-10-09)_
+- [ ] **Zeva Expands NomadNet Interfaces and Adds Location Storage** — Zeva added more interfaces to their NomadNet instance and found a way to store saved locations by identifying nodes when connecting. They also mentioned using rsNomad in their rettui app for toggling identification.  _(Zeva · #reticulum 2026-09-23)_
+- [ ] **Reticulum Observer Setup Instructions Shared** — nwithan8 provided instructions for setting up an observer for Colorado Mesh on Reticulum, including a link to the MQTT setup guide. This helps community members contribute to the network's data collection.  _(nwithan8 · #meshcore 2026-10-08)_
+- [ ] **Reticulum Integration and RRC Server Activity** — nwithan8 discussed Reticulum integration, including RRC sessions and exploring the capabilities of the mesh client. This indicates ongoing interest in Reticulum's role within the mesh network.  _(nwithan8 · #general 2026-10-08)_
+- [ ] **Rin Discusses Reticulum Fingerprint Button Implementation** — Rin (R-04) mentioned that if they can determine the function of a fingerprint button, they could implement it in Reticulum. This could enhance security or user interaction features.  _(Rin (R-04) · #reticulum 2026-10-01)_
+- [ ] **Reticulum User Authentication Feature** — Rin (R-4) mentioned the possibility of allowing users to create a userid and password if the site supports it.  _(Rin (R-4) · #reticulum 2026-10-01)_
 - [ ] _add one:_ 
 
 ## Gear & Firmware
 
-- [ ] **Affordable Kelvin Sense Battery Holder** — beala shared a $8 Kelvin sense battery holder for battery testing setups, featuring spring-loaded contacts and 3D-printed components. The product is available on AliExpress at https://www.aliexpress.us/item/3256811870803867.html.  _(beala · #hardware 2026-09-21)_
-- [ ] **Oscillator Drift Measurement Blog Post** — beala has written a blog post about measuring oscillator drift in various transmitters, including a discussion on the performance of TCXOs. The post is available at https://beala.substack.com/p/i-bought-a-very-precise-clock-so.  _(beala · #hardware 2026-09-23)_
-- [ ] **M9 Device Promises Accessibility for Non-Geeks** — Budt W0RMT praised the M9 device for its potential to be a good option for non-technical users, such as those interested in skiing, running, or hiking. This highlights the community's interest in making mesh technology more accessible to a broader audience.  _(budt W0RMT · #hardware 2026-09-16)_
-- [ ] **RFOXiA BLE Module Firmware and Hardware** — The RFOXiA BLE module, which is a long-range Bluetooth LE system with mesh capabilities, has been shared with the community. The firmware is open-source, and the manufacturer is sending hardware to enable support for this module in the mesh-client.  _(<@1019232922580045876> · #mesh-client 2026-10-05)_
-- [ ] **Antenna Replacement and Wardriving** — Zeva answered questions about wardriving, confirming that it can be done in a car with either internal or external antennas. They use a solar node magnetically attached to their car and mentioned that speed does not affect the app's performance.  _(Zeva · #wardriving 2026-10-06)_
-- [ ] **User Shares Experience with Meshtastic Device** — Runr mentioned purchasing the Meshtastic version of the device, which they believe is unaffected by the MeshCore units being held back. This indicates ongoing interest in using Meshtastic devices for temporary, outdoor purposes.  _(Runr · #hardware 2026-09-16)_
-- [ ] **RNode Firmware for RAK 4631** — budt W0RMT shared a link to RNode firmware for the RAK 4631, hosted on GitHub at https://github.com/markqvist/RNode_Firmware. This firmware allows Reticulum functionality on RAK 4631 devices.  _(budt W0RMT · #general 2026-09-22)_
-- [ ] **Runr Addresses SD Card Issues in Hardware Orders** — Runr mentioned that an SD card issue was found in a batch of hardware, but the order shipped today. They noted that the SD card is replaceable, indicating that the issue is manageable and not a critical failure.  _(Runr · #hardware 2026-09-16)_
-- [ ] **Battery Testing and Setup** — rocode mentioned experiments with an external antenna and waiting for rak 1-watt boards and a solar enclosure for a carpeater. They also noted the need to verify firmware to avoid causing issues for the region.  _(rocode · #general 2026-09-18)_
-- [ ] **nwithan8 Shares MeshCore Map and Node Details** — nwithan8 provided links to the MeshCore map and node details, including instructions on how to search for nodes and view recent packets. This information is crucial for network monitoring and troubleshooting.  _(nwithan8 · #software 2026-10-08)_
+- [ ] **Hardware and Antenna Upgrades for Solar Nodes** — beala shared a custom solar charger setup using an LFP battery and LR2021 carrier board. rocode mentioned waiting for rak 1-watt boards and a solar enclosure for a carpeater. UtahSTI set up a solar repeater with a SenseCAP P1-Pro and plans to move it to the roof with a 5.8 dBi antenna.  _(beala, rocode, UtahSTI · #general 2026-09-18)_
+- [ ] **Beala Releases Custom MeshCore Build** — Beala released a custom MeshCore build that disables both the LED and buzzer, available at https://github.com/beala/MeshCore/releases/tag/t1000e-v1.17.1. This build is useful for users looking to reduce power consumption or noise.  _(beala · #hardware 2026-09-23)_
+- [ ] **New Radioddity Nodara Meshtastic Radio Released** — JohnnyW5KV mentioned a new product, the Radioddity Nodara Meshtastic radio, which is set to be reviewed. The product page is available at https://www.radioddity.com/products/radioddity-nodara-meshtastic-radio.  _(JohnnyW5KV · #general 2026-09-18)_
+- [ ] **Zeva Shares Custom Solar Car Node Setup** — Zeva has a RAK 1W node with a 3000 mAh battery in their solar car node setup. They are also working on a new fully modular magnetic car node that should be better in the long run than the one they modified last time.  _(Zeva · #wardriving 2026-09-15)_
+- [ ] **Zeva Shares Solar-Powered Car Node Project** — Zeva shared a link to a 1-Watt low-profile solar mesh car node project on Printables, indicating progress in building portable mesh nodes for vehicles. The project includes a note about the lack of antennas.  _(Zeva · #projects-and-builds 2026-09-15)_
+- [ ] **RAK 1W Board Praised for Integrated Filters** — JohnnyW5KV praised the RAK 1W board for its integrated input and output filters, calling it an awesome little board for the price. This board is a popular choice for mesh networking setups.  _(JohnnyW5KV · #meshcore 2026-09-15)_
+- [ ] **NomadNet Repeater Name Tool Suggested** — nwithan8 suggested using the repeater name tool at https://tools.meshcore.coloradomesh.org/repeater_name_tool/ to name repeaters according to the convention.  _(nwithan8 · #wardriving 2026-10-27)_
+- [ ] **Car Node Mounting Options Discussed** — Zeva mentioned various options for mounting car nodes, including 3D-printed mounts and magnetic feet with solar panels, showing the community's creativity in node design.  _(Zeva · #wardriving 2026-09-15)_
+- [ ] **MeshCore and Meshtastic Node Maps Available** — nwithan8 shared links to maps showing known Meshtastic and MeshCore nodes, providing community members with visual references for network coverage and node locations.  _(nwithan8 · #aurora 2026-09-29)_
+- [ ] **Observer Setup Guide Shared for MeshCore** — beala provided a guide for setting up an observer that reports to the Colorado Mesh MQTT broker, contributing to the network's data collection and map updates.  _(beala · #meshcore 2026-09-22)_
+- [ ] _add one:_ 
+
+## For Sale & Wanted
+
+- [ ] **Sticker Fix and Design Prototype Shared** — cj fixed a sticker issue and shared a draft PR for a design prototype of the mesh-client mobile app, indicating ongoing development and community contributions.  _(cj · #mesh-client-mobile-apps 2026-10-14)_
 - [ ] _add one:_ 
 
 ## Call to Action
 
-- [ ] **Website Maintenance Scheduled** — KFØUFO - Andrew informed the community that the website and some services may be rebooted intermittently overnight for maintenance. Apologies for any service interruptions, which are expected to be brief.  _(KFØUFO - Andrew · #general 2026-10-09)_
-- [ ] **Request for Observer Hosting in Western Slope** — nwithan8 is asking if anyone in Grand Junction or the Western Slope can host a MeshCore observer. One of the firmwares allows a device to function as a repeater/observer, provided it has internet access.  _(nwithan8 · #western-slope 2026-09-22)_
-- [ ] **Request for Summary Document on MECP Messages** — nwithan8 is requesting a summary document of messages related to MECP to help digest the information and organize it into buckets or channels for better management.  _(nwithan8 · #mecp 2026-10-08)_
+- [ ] **Help Improve MeshCore and Network Coverage** — omgitsgela is interested in expanding network coverage to mountain areas and highway corridors. They are sourcing physical nodes for about $20 each and are looking for community support. Volunteers are needed to help build and deploy these nodes.  _(omgitsgela · #emcomm-network-ops 2026-10-07)_
+- [ ] **Promo Video for Colorado Mesh** — Rin (R-4) suggested creating a promo video to showcase Colorado Mesh's capabilities, including support for multiple protocols, online maps, MQTT, and TAK servers. This could help attract new members and users.  _(Rin (R-4) · #emcomm-network-ops 2026-09-24)_
+- [ ] **Call for Emergency Communicator Participation in Planning** — OmGitsGela expressed interest in helping with planning for emergency communication efforts. They are an emergency communicator and would like to contribute to the planning process.  _(omgitsgela · #emcomm-network-ops 2026-10-07)_
+- [ ] **Call for Volunteers for Colorado Emergency Reporting Network** — nwithan8 invited volunteers for the Colorado Emergency Reporting Network, with more information available at https://co-cern.org/.  _(nwithan8 · #ham-radio 2026-10-08)_
+- [ ] **Request for Summary Document on MECP Messages** — Rin (R-4) asked for a summary document of MECP messages to help digest the information, as they were being overwhelmed by the volume.  _(Rin (R-4) · #mecp 2026-10-08)_
 - [ ] _add one:_ 
 
 ## Community Spotlight
 
-- [ ] **Zeva's Contributions to the Community** — Zeva has been actively contributing to the community, including sharing projects and providing support. Their work on the solar mesh car node and other builds has been valuable to the mesh network.  _(Zeva · #projects-and-builds 2026-09-15)_
-- [ ] **Zeva Shares Repeater Information** — Zeva shared a link to a repeater on MeshMapper, located at 4D59, 38.33593, -104.75653. This information is useful for locating and connecting to repeaters in the area.  _(Zeva · #pueblo 2026-09-17)_
-- [ ] **nwithan8 Adds /AG to Call for Next Few Days** — nwithan8 has added the /AG designation to their call for the next few days, indicating a specific mode or activity.  _(nwithan8 · #ham-radio 2026-10-05)_
+- [ ] **Celebrating New Members and Contributions** — Half Live shared a link to a TDeck Blackjack project, and Zeva suggested adding https://meshcore.io to flyers. rocode provided a flyer example with colored paper for better visibility. The community is actively contributing to projects and improving network coverage.  _(Half Live, Zeva, rocode · #meshcore 2026-10-16)_
+- [ ] **Celebrating Community Contributions** — Darin shared his first solar node built from a solar light from ACE hardware. beala showcased a custom solar charger setup with an LFP battery. UtahSTI set up a solar repeater in Hesperus, and budt W0RMT is working on MECP integration for ATAK nodes.  _(Darin, beala, UtahSTI · #projects-and-builds 2026-10-12)_
+- [ ] **Zeva's Hardware Retrieval and Deployment Plans** — Zeva mentioned retrieving an old repeater to update its hardware and redeploy it, highlighting active maintenance and expansion efforts in the western slope region.  _(Zeva · #foco-greeley 2026-10-07)_
+- [ ] **Zeva Hits #5 on MeshMapper** — Zeva achieved a high rank on MeshMapper after a weekend of wardriving, showcasing the community's efforts in expanding network coverage and data collection.  _(Zeva · #wardriving 2026-10-07)_
 - [ ] _add one:_ 
 
 ## Around the Web
 
-- [ ] **Sensor Node Blog Post Shared for Community Interest** — Beala shared a blog post about a new sensor node type, which could be of interest to the community for potential projects or applications. This demonstrates the community's interest in exploring new hardware and technology.  _(beala · #projects-and-builds 2026-09-19)_
-- [ ] **New Mesh Client Video Released** — A new mesh client video has been released, showcasing features and updates. The video can be viewed at https://discord.com/channels/1436156966648152271/1485240999406993489/1556411174570954757.  _(nwithan8 · #software 2026-10-04)_
-- [ ] **Mesh-Client v6 Release** — The latest version of the mesh-client, v6, has been released. Users can download the release for their platform from https://github.com/Colorado-Mesh/mesh-client/releases/tag/v6.0.0.  _(<@1019232922580045876> · #mesh-client 2026-09-30)_
-- [ ] **MeshCore Map and MQTT Nodes** — The community can view known Meshtastic nodes via MQTT at https://map.meshtastic.coloradomesh.org/map and known MeshCore nodes at https://map.meshcore.coloradomesh.org/?tab=Map.  _(<@1019232922580045876> · #aurora 2026-09-29)_
-- [ ] **MeshCore Map and Beacon Live View** — JohnnyW5KV preferred the live map of beacon for its clarity, as it removes nodes not in the equation. Rachel provided a link to the MeshCore Repeater Setup guide on the wiki for optimal settings.  _(JohnnyW5KV, Rachel · #meshcore 2026-09-21)_
+- [ ] **Resources for MeshCore and Advocacy** — The Colorado Mesh advocacy repo contains resources for newsletters, stickers, and other materials. The MeshCore map and BBS are accessible via https://map.meshcore.coloradomesh.org and https://github.com/Colorado-Mesh/mesh-bbs, respectively. The RNode firmware for RAK 4631 is available on GitHub.  _(cj, beala, budt W0RMT · #meshcore 2026-09-22)_
+- [ ] **Colorado Mesh Monthly Newsletter Available Online** — The Colorado Mesh Monthly newsletter is now available online at https://blog.coloradomesh.org/2026/09/21/colorado-mesh-monthly-aug-sept-2026.html, providing a comprehensive overview of recent developments and community updates.  _(KFØUFO - Andrew · #announcements 2026-09-24)_
+- [ ] **Columba and Eridanus App Development Insights** — Torlando, the developer of the Columba and Eridanus apps, shared insights on iOS development challenges and AI model interactions. The newer AI models are flagging his work as cybersecurity risks. More details can be found at the provided link.  _(Runr · #software 2026-09-24)_
+- [ ] **Blog Post on Inclusivity in Amateur Radio** — budt W0RMT has published a blog post on inclusivity in amateur radio, which has sparked discussions and some negative reactions. The post can be found at https://w0rmt.net/2024/02/23/inclusivity-in-amateur-radio/.  _(budt W0RMT · #ham-radio 2026-09-23)_
+- [ ] **Rettui Android App Release** — Zeva has released a new version of the Rettui app, including an Android version and additional games. The release can be found at https://github.com/zevaryx/rettui/releases/tag/v1.10.0-dev.1.  _(Zeva · #software 2026-10-22)_
 - [ ] _add one:_ 
 
 ---
@@ -116,38 +132,45 @@ _Top candidates per section shown; the full pool is in the candidates JSON._
 ## Anything big we missed? Add it here:
 - [ ] 
 ---
-## 🔒 Sourcing note (read first)
-Candidates here come **only from public channels**. Discussion in internal/
-planning channels (#mesh-ops, #scopes, #mesh-planning, #advocacy) was read for
-context but is NOT quoted or published — see candidates-background.json for that
-material (do-not-publish). If a topic you want is only in those channels, confirm
-it's been said publicly before including it.
+## 🔒 Sourcing note
+Candidates above are from PUBLIC channels only. Internal/planning channels
+(#mesh-ops, #scopes, #mesh-planning, #advocacy) are read for context but never
+quoted/published. (One mesh-ops item even mentioned a plaintext DB password —
+exactly the kind of thing that must never leak. Do-not-publish bucket:
+candidates-background.json.)
 
-## 🔁 Carry-forward from September (unused, still relevant?)
-- [ ] NextNav friction (recurring) — only if raised publicly
-- [ ] Review ~90 unused Sept candidates (issues/2026-09/data/candidates-aug-sep.json) for public ones
+## 🗣️ Admin guidance — topics the team asked us to cover (from #mesh-ops)
+_Direction only. We cover these by finding the PUBLIC material to cite, not by quoting mesh-ops._
+- [ ] **Mesh Client V6 feature roundup** (Rin R-4): new UI, updated docs, chat
+      translations, new BLE implementation, high-speed wifi streaming, advanced
+      filtering, MECP. → make this a substantial feature; public sources in
+      #mesh-client-dev / #mesh-client / #general / #software.
+- [ ] **"We're community-run, relying on volunteers"** (Rin R-4): a LIGHT touch —
+      not a rebuttal — framing how the network works (volunteers, every repeater
+      matters). Good Call-to-Action / "how we work" sidebar.
+- [ ] **Western Slope goings-on** (KFØUFO/Andrew offered a list): regional news —
+      pull from #western-slope + Andrew's list when it comes.
+- [ ] **Meshtastic default-vs-custom frequency / adoption** (Rin R-4): longturbo
+      908.75 MHz slot-14 default vs. custom settings requiring discovery. Candidate
+      explainer; source from public #meshtastic discussion.
+- [ ] **Network health note** (JohnnyW5KV): OpenHop ~65% collision / "Congested" —
+      optional; verify in a public channel first.
+
+## 🆕 Net-new October themes (PUBLIC-sourced)
+- [ ] **EmComm / MECP** — public in #emcomm-network-ops, #mecp, #mesh-client. Lead-story candidate. [CONFIRM #emcomm-network-ops is public]
+- [ ] **Mesh Client V6 (Wayland + the V6 feature set above)** — #mesh-client-dev very active this window
+- [ ] **Chicagoland naming trial** — #meshcore (Ed)
+- [ ] **CoreScope → Beacon** — analyzer rename, #meshcore/#general
+- [ ] **Reticulum: BBS + mobile posting; security audit passed** — #reticulum
+- [ ] **New #tak channel** — TAK integration activity worth a mention?
 
 ## 🔂 Recurring anchors (default-include)
-- [x] Weekly Net reminder (Thursdays)
-- [x] Get the Mesh Client (Joey NV0N)
-- [x] "No RF needed — try Reticulum on the RRC hub"
-- [x] Airtime etiquette reminder
-- [ ] Run an observer in your area
-- [ ] MeshCore naming convention
-
-## 🧵 Follow-ups on September threads (status check)
-- [ ] **BARCFest RECAP** — happened Oct 4; we previewed it. How'd it go? (confirm from a public post)
-- [ ] **500 kHz profile** — Sept was "testing toward"; result now? (SNR sweeps discussed internally — need a public update)
-- [ ] **Scopes / Chicagoland naming trial** — the Chicagoland trial IS public (#meshcore); the scope-definition debate itself is internal, don't quote it
-- [ ] **MediumFast migration** — adoption update (public channels only)
-
-## 🆕 Net-new October themes (PUBLIC-sourced — safe to include)
-- [ ] **EmComm / MECP** — the Mesh Emergency Communications Protocol; public in #emcomm-network-ops, #mecp, #mesh-client. Likely lead story. [CONFIRM #emcomm-network-ops is a public channel]
-- [ ] **Mesh Client V6 (Wayland)** — public in #general/#mesh-client/#software
-- [ ] **Chicagoland Naming Convention trial** — public in #meshcore (Ed)
-- [ ] **CoreScope → Beacon** — analyzer change, public in #meshcore/#general
-- [ ] **Admin / leadership updates** — from #announcements (public ✓)
-- [ ] **Reticulum: BBS + mobile posting; security audit passed** — public in #reticulum
+- [x] Weekly Net reminder (Thursdays)  · [x] Get the Mesh Client (Joey NV0N)
+- [x] "No RF needed — try Reticulum on the RRC hub"  · [x] Airtime etiquette
+- [ ] Run an observer in your area  · [ ] MeshCore naming convention
 
 ## ⚠️ Needs a PUBLIC source before including
-- [ ] **PRA Repeater is up** (JohnnyW5KV) — only found in #mesh-planning (internal). Likely announced publicly too; confirm a public post before publishing.
+- [ ] **PRA Repeater is up** (JohnnyW5KV) — only seen in #mesh-planning (internal). Confirm a public post.
+
+## 📝 Context (not for print)
+- Letark traveling + down a laptop; targeting release **before Halloween**.

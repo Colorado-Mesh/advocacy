@@ -13,9 +13,10 @@
 
 1471001300001886411   mesh-ops           # ops/admin coordination
 1544705628142833714   scopes             # internal region-definition planning
-1436164704895762564   mesh-planning      # node/deployment planning (internal coordination)
 # advocacy = where WE plan the newsletter itself — never quote it
 # (fill in advocacy channel ID if/when confirmed)
 
 # NOTE: leadership-chat and org-planning are in discord-exclude.txt (dropped entirely).
-# TODO confirm with Alex: is #emcomm-network-ops public (quotable) or internal?
+# CONFIRMED PUBLIC (quotable), do NOT list here:
+#   #emcomm-network-ops  — public EmComm/MECP discussion (lead-story source)
+#   #mesh-planning        — public node/deployment planning (confirmed 2026-10-27)

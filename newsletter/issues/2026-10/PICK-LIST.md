@@ -31,7 +31,7 @@ _Top candidates per section shown; the full pool is in the candidates JSON._
 - [ ] **Meshcore Coverage Map Updated for Better Message Delivery** — A new coverage map for MeshCore has been shared, highlighting areas with better message delivery. The map is accessible via the provided link and is useful for users looking to optimize their mesh communication.  _(cj · #general 2026-10-17)_
 - [ ] **Zeva Testing New Solar Input Setup for Car Node** — Zeva is working on figuring out solar input for their car node, planning to use the wedge area through a dedicated hole. They are still unsure about adding a gland, but the setup is progressing.  _(Zeva · #hardware 2026-09-29)_
 - [ ] **Weekly Net Check-In and Map Updates** — nwithan8 is monitoring the weekly net check-in and has provided a link to the MeshCore map for tracking coverage. The community is encouraged to check in and report any issues with connectivity.  _(nwithan8 · #weekly-net 2026-10-09)_
-- [ ] **Nwithan8 Thanks Observer for Mesh Data** — Nwithan8 thanked an observer for reporting data and mentioned efforts to onboard DRO on MeshMapper to enable wardriving in new locations. This helps in mapping and bridging mesh islands.  _(nwithan8 · #western-slope 2026-10-08)_
+- [ ] **Meshcore Repeater Coverage and Multibyte Path Support** — Beala noted that all repeaters in the area support multibyte paths, even if their advertisements are single-byte. This is a significant improvement for mesh communication and message routing.  _(beala · #mesh-planning 2026-10-02)_
 - [ ] _add one:_ 
 
 ## Meshtastic
@@ -86,8 +86,8 @@ _Top candidates per section shown; the full pool is in the candidates JSON._
 - [ ] **RAK 1W Board Praised for Integrated Filters** — JohnnyW5KV praised the RAK 1W board for its integrated input and output filters, calling it an awesome little board for the price. This board is a popular choice for mesh networking setups.  _(JohnnyW5KV · #meshcore 2026-09-15)_
 - [ ] **NomadNet Repeater Name Tool Suggested** — nwithan8 suggested using the repeater name tool at https://tools.meshcore.coloradomesh.org/repeater_name_tool/ to name repeaters according to the convention.  _(nwithan8 · #wardriving 2026-10-27)_
 - [ ] **Car Node Mounting Options Discussed** — Zeva mentioned various options for mounting car nodes, including 3D-printed mounts and magnetic feet with solar panels, showing the community's creativity in node design.  _(Zeva · #wardriving 2026-09-15)_
+- [ ] **Potato Mesh Ingestor API Key Mentioned** — nwithan8 mentioned an API key required for the Potato Mesh ingestor, which is available at https://github.com/l5yth/potato-mesh#ingestor.  _(nwithan8 · #mesh-planning 2026-10-18)_
 - [ ] **MeshCore and Meshtastic Node Maps Available** — nwithan8 shared links to maps showing known Meshtastic and MeshCore nodes, providing community members with visual references for network coverage and node locations.  _(nwithan8 · #aurora 2026-09-29)_
-- [ ] **Observer Setup Guide Shared for MeshCore** — beala provided a guide for setting up an observer that reports to the Colorado Mesh MQTT broker, contributing to the network's data collection and map updates.  _(beala · #meshcore 2026-09-22)_
 - [ ] _add one:_ 
 
 ## For Sale & Wanted
@@ -110,6 +110,7 @@ _Top candidates per section shown; the full pool is in the candidates JSON._
 - [ ] **Celebrating Community Contributions** — Darin shared his first solar node built from a solar light from ACE hardware. beala showcased a custom solar charger setup with an LFP battery. UtahSTI set up a solar repeater in Hesperus, and budt W0RMT is working on MECP integration for ATAK nodes.  _(Darin, beala, UtahSTI · #projects-and-builds 2026-10-12)_
 - [ ] **Zeva's Hardware Retrieval and Deployment Plans** — Zeva mentioned retrieving an old repeater to update its hardware and redeploy it, highlighting active maintenance and expansion efforts in the western slope region.  _(Zeva · #foco-greeley 2026-10-07)_
 - [ ] **Zeva Hits #5 on MeshMapper** — Zeva achieved a high rank on MeshMapper after a weekend of wardriving, showcasing the community's efforts in expanding network coverage and data collection.  _(Zeva · #wardriving 2026-10-07)_
+- [ ] **nwithan8 Sets Up Node with Big Antenna** — nwithan8 shared that they had set up their node and planned to install a large antenna to improve signal strength.  _(nwithan8 · #mesh-planning 2026-09-22)_
 - [ ] _add one:_ 
 
 ## Around the Web
@@ -133,44 +134,34 @@ _Top candidates per section shown; the full pool is in the candidates JSON._
 - [ ] 
 ---
 ## 🔒 Sourcing note
-Candidates above are from PUBLIC channels only. Internal/planning channels
-(#mesh-ops, #scopes, #mesh-planning, #advocacy) are read for context but never
-quoted/published. (One mesh-ops item even mentioned a plaintext DB password —
-exactly the kind of thing that must never leak. Do-not-publish bucket:
-candidates-background.json.)
+Candidates are from PUBLIC channels. Internal channels (#mesh-ops, #scopes,
+#advocacy) are read for context but never quoted/published → candidates-background.json.
+(#mesh-planning and #emcomm-network-ops are PUBLIC as of 2026-10-27 and ARE quotable.)
 
 ## 🗣️ Admin guidance — topics the team asked us to cover (from #mesh-ops)
-_Direction only. We cover these by finding the PUBLIC material to cite, not by quoting mesh-ops._
-- [ ] **Mesh Client V6 feature roundup** (Rin R-4): new UI, updated docs, chat
-      translations, new BLE implementation, high-speed wifi streaming, advanced
-      filtering, MECP. → make this a substantial feature; public sources in
-      #mesh-client-dev / #mesh-client / #general / #software.
-- [ ] **"We're community-run, relying on volunteers"** (Rin R-4): a LIGHT touch —
-      not a rebuttal — framing how the network works (volunteers, every repeater
-      matters). Good Call-to-Action / "how we work" sidebar.
-- [ ] **Western Slope goings-on** (KFØUFO/Andrew offered a list): regional news —
-      pull from #western-slope + Andrew's list when it comes.
+_Direction only; cover via public sources, don't quote mesh-ops._
+- [ ] **Mesh Client V6 feature roundup** (Rin R-4): new UI, docs, chat translations,
+      new BLE, high-speed wifi streaming, advanced filtering, MECP → make it a feature.
+      Public: #mesh-client-dev / #mesh-client / #general / #software.
+- [ ] **"We're community-run, relying on volunteers"** (Rin R-4): LIGHT touch, not a
+      rebuttal. Good CTA / "how we work" sidebar ("every repeater matters").
+- [ ] **Western Slope goings-on** (KFØUFO/Andrew offered a list): #western-slope.
 - [ ] **Meshtastic default-vs-custom frequency / adoption** (Rin R-4): longturbo
-      908.75 MHz slot-14 default vs. custom settings requiring discovery. Candidate
-      explainer; source from public #meshtastic discussion.
-- [ ] **Network health note** (JohnnyW5KV): OpenHop ~65% collision / "Congested" —
-      optional; verify in a public channel first.
+      908.75 MHz slot-14 default vs. custom. Public #meshtastic.
+- [ ] **Network health** (JohnnyW5KV): OpenHop ~65% collision / "Congested" — optional.
 
 ## 🆕 Net-new October themes (PUBLIC-sourced)
-- [ ] **EmComm / MECP** — public in #emcomm-network-ops, #mecp, #mesh-client. Lead-story candidate. [CONFIRM #emcomm-network-ops is public]
-- [ ] **Mesh Client V6 (Wayland + the V6 feature set above)** — #mesh-client-dev very active this window
+- [ ] **EmComm / MECP** — #emcomm-network-ops (PUBLIC ✓), #mecp, #mesh-client. LEAD STORY.
+- [ ] **Mesh Client V6 (Wayland + the V6 feature set)** — #mesh-client-dev very active
+- [ ] **New repeaters: Buena Vista & Salida; PRA repeater activation** — #mesh-planning (PUBLIC ✓)
 - [ ] **Chicagoland naming trial** — #meshcore (Ed)
 - [ ] **CoreScope → Beacon** — analyzer rename, #meshcore/#general
 - [ ] **Reticulum: BBS + mobile posting; security audit passed** — #reticulum
 - [ ] **New #tak channel** — TAK integration activity worth a mention?
 
 ## 🔂 Recurring anchors (default-include)
-- [x] Weekly Net reminder (Thursdays)  · [x] Get the Mesh Client (Joey NV0N)
-- [x] "No RF needed — try Reticulum on the RRC hub"  · [x] Airtime etiquette
-- [ ] Run an observer in your area  · [ ] MeshCore naming convention
-
-## ⚠️ Needs a PUBLIC source before including
-- [ ] **PRA Repeater is up** (JohnnyW5KV) — only seen in #mesh-planning (internal). Confirm a public post.
+- [x] Weekly Net (Thu) · [x] Get the Mesh Client (Joey NV0N) · [x] Reticulum on RRC hub
+- [x] Airtime etiquette · [ ] Run an observer · [ ] MeshCore naming convention
 
 ## 📝 Context (not for print)
 - Letark traveling + down a laptop; targeting release **before Halloween**.

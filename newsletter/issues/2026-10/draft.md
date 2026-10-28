@@ -21,7 +21,7 @@ Bigger than the Sept issue by design. Run dedup-check.py before publishing.
 ## 📰 General News
 
 - **Emergency communications took center stage.** A lot of this month's energy went toward making the mesh genuinely useful when it matters most — a new **MECP** (Mesh Emergency Communications Protocol) under active development, a TAK bridge for situational awareness, and a call for volunteers for the Colorado Emergency Reporting Network. The whole thread gets its own Story of the Month below, but it's the throughline of October.
-- **Admin team changes.** The leadership team shared a round of updates this month: several admins stepped down to focus on other priorities — our sincere thanks for everything they put in — and the team welcomed a new admin aboard. The Admin Team handles day-to-day Discord and website operations; together with the Regional Representatives they make up the broader org leadership. [CONFIRM: whether to name the departing/incoming admins or keep it general — defer to the announcement's wording.]
+- **Admin team changes.** The leadership team shared a round of updates this month. Several admins stepped down to focus on other priorities — **👀, Dani, strex, Slim, and littlecrab (KFØWBX)** — and we're grateful for everything they put in. Please join us in welcoming **Zeva** to the admin team. The Admin Team handles day-to-day Discord and website operations; together with the Regional Representatives they make up the broader org leadership.
 - **One short link to rule them all.** Colorado Mesh now has a tidy set of short links on the `colome.sh` domain: `colome.sh` → main site, `colome.sh/discord`, `colome.sh/wiki`, `colome.sh/start` (getting-started), `colome.sh/mcmap` (the MeshCore map). Easier to share, easier to remember.
 - **Mesh Client v6.0.0 is here** — and it's big enough that it gets its own section below. The short version: new UI, a new BLE implementation, Reticulum support, and a lot more.
 - **The map got a new engine.** The MeshCore analyzer formerly known as CoreScope has been replaced by **Beacon**, a faster, purpose-built app. The old CoreScope URL now redirects to Beacon at https://map.meshcore.coloradomesh.org.
@@ -30,7 +30,7 @@ Bigger than the Sept issue by design. Run dedup-check.py before publishing.
 
 ## 📅 Events & Meetups
 
-- **Parker Radio Association Chili Cookout.** PRA hosted a chili cookout for members and families on 80 acres in Franktown — and it pulled in **5–6 new members from the Colorado Mesh community**. Club membership is $25/year. More at www.parkerradio.org. [CONFIRM date if we want to print it.]
+- **Parker Radio Association Chili Cookout.** PRA hosted a chili cookout for members and families the weekend of **October 3–4** on 80 acres in Franktown — and JohnnyW5KV notes it's pulled in **5–6 new members from the Colorado Mesh community**. Club membership is $25/year. More at www.parkerradio.org.
 - **A letter went to Rocky Mountain National Park.** JohnnyW5KV wrote to the park superintendent requesting permission to install a mesh repeater, making the case for backcountry communications infrastructure. No word back yet, but it's exactly the kind of ambitious ask that expands what the mesh can be. ([#backcountry-general](https://discord.com/channels/1436156966648152271/))
 - **Wardriving season is in full swing.** Zeva ran a Grand Junction wardrive with MeshMapper and a weekend sweep that hit **#5 on the MeshMapper leaderboard**; wardrivers picked up fresh coverage along **I-25 and Highway 66**; and new observers lit up in **Durango** and **Buena Vista** (a half-dozen new repeaters on the map there alone). If you've got a car node, this is the month to drive.
 - **Weekly Net — every Thursday, all day.** Quick reminder on the rules: a check-in is *any* message on the MeshCore Public channel between 12:00 a.m. and 11:59 p.m. on Thursday — not just the one-hour Discord event. nwithan8 noted most regular check-ins are showing strong "green dot" coverage (seen by many nodes), with isolated exceptions out in Pueblo and the western slope.
@@ -44,7 +44,7 @@ Honorable mention on the video side: the **Mesh Client V6 walkthrough** is up at
 ## 📶 Meshtastic
 
 - **A firmware warning worth heeding: hold off on Meshtastic 2.8.** Multiple operators report that *every* 2.8 release (including nightlies) is causing problems, and **2.8 on Seeed Solar Nodes specifically causes boot loops** — discovered the hard way. The 2.7 line is still behaving. If you're on 2.7 and stable, there's no rush to jump. ([#meshtastic](https://discord.com/channels/1436156966648152271/))
-- **Firmware 3.0 is on the horizon — and it changes bandwidth allocations.** omgitsgela notes that 3.0 will shift how bandwidth is allocated, and that switching to LongTurbo right now isn't recommended due to performance drops. The advice: wait for 3.0 before making big preset changes. [CONFIRM 3.0 specifics before printing as fact.]
+- **Firmware 3.0 is on the horizon — and it changes bandwidth allocations.** omgitsgela notes that 3.0 will shift how bandwidth is allocated, and that switching to LongTurbo right now isn't recommended due to performance drops. The advice: wait for 3.0 before making big preset changes.
 - **MediumFast adoption is still the slow grind.** A node in the Denver south suburbs switched to MediumFast as recommended but wasn't seeing other nodes — and JohnnyW5KV put his finger on why: most people never change their defaults, so traffic splits between whoever's on MediumFast and whoever stayed on LongFast. Preset defaults really do shape the whole network. If your area recommends MediumFast, the switch only pays off when neighbors make it too.
 - **A clever idea: MediumFast as a backhaul.** omgitsgela floated using MediumFast as an amplified point-to-point backhaul — super-long links between sites — with local breakouts onto LongFast. They're already running an amplifier on a MediumFast node (but not the paired LongFast one) to keep an overloaded LongFast repeater from drowning in channel utilization. Interesting blueprint for extending reach without clogging the local air.
 - **The Lookout Mountain bridge is half-alive.** Zeva has a LongFast node and a WiFi bridge up on Lookout; the goal is to bridge LongFast and MediumFast over serial and echo it all to MQTT. Not finished, but a real step toward tying the high-site plumbing together.
@@ -121,7 +121,7 @@ And a warm welcome to everyone who built their first node this month — includi
 - **Mesh Client V6 walkthrough (video)** — https://youtu.be/iRu1FDME0-w
 - **Rettui (Reticulum TUI) — now with an Android release** by Zeva — https://github.com/zevaryx/rettui/releases
 - **MeshMapper app overview** (how the mapping works) — https://wiki.meshmapper.net/app_overview/
-- **meshcore-tak-bridge** (MeshCore ↔ ATAK) — [CONFIRM repo link before printing]
+- **meshcore-tak-bridge** (MeshCore ↔ ATAK) — https://github.com/Colorado-Mesh/meshcore-tak-bridge
 - **Colorado Mesh short links** — https://colome.sh
 
 ## 📗 Story of the Month: When the Mesh Grows Up — Emergency Comms
@@ -157,6 +157,6 @@ next issue. Big or small, we want it.
 
 **😄 Nerd Joke of the Month:** Why did the MeshCore repeater refuse to panic in an emergency? It knew help was only a few hops away.
 
-**🎁 The Prize:** congratulations to **jfh200** 🎉 — our winner this month, drawn at random from everyone who reacted to last month's newsletter announcement in Discord! [CONFIRM prize item for this issue.] Want in next month? **React to this issue's announcement post** and you're entered.
+**🎁 The Prize:** congratulations to **jfh200** 🎉 — our winner this month, drawn at random from everyone who reacted to last month's newsletter announcement in Discord! This month's prize: **[PRIZE TBD — placeholder, admins to fill in]**. Want in next month? **React to this issue's announcement post** and you're entered.
 
 **73** 📻

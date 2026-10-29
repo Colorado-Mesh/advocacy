@@ -85,6 +85,16 @@ Produce the final artifact and release it.
 - Stage 0 is incremental: the Discord gatherer keeps a high-water mark so each
   month only pulls what's new.
 
+## Git workflow (one branch per issue)
+- `main` holds **published** issues and the tooling.
+- Each month's issue is built on its own **feature branch**: `issue-YYYY-MM`
+  (e.g. `issue-2026-10`). All the drafting, feedback, and PDF iteration happen
+  there — `main` stays clean.
+- When the issue ships (Gate 4 approved), open a PR from `issue-YYYY-MM` into
+  `main` and merge it. Delete the branch after merge.
+- Only the publishable artifacts are committed (draft.md + final PDF); raw data,
+  photos, and state stay gitignored (see DATA-PRIVACY.md).
+
 ## Who does what
 | Role | Stages | Notes |
 |---|---|---|

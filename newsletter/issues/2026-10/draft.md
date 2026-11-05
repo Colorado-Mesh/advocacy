@@ -36,9 +36,9 @@ Bigger than the Sept issue by design. Run dedup-check.py before publishing.
 
 ## 📸 Photo / Video of the Month
 
-![Zeva's new modular magnetic car node — the wardriving rig (photo: Zeva)](photos/carnode_square_web.jpg)
+![jk's modified Wio Tracker L1 case with an added pogo-pin connector (photo: jk)](photos/jkbuild_square_web.jpg)
 
-Caption: Meet the wardriving rig. This is **Zeva's** new fully modular, magnetic car node — the kind of build that's been filling in the map from Grand Junction to the Front Range all month. Snap it to the roof, drive, and every trip adds coverage data. Photo: Zeva.
+Caption: October's build of the month: **jk** modified a Wio Tracker L1 case and added a pogo-pin connector for easy, solder-free battery swaps. Exactly the kind of hands-on tinkering — print, tweak, improve, share — that keeps the mesh fun. Photo: jk, from [#projects-and-builds](https://discord.com/channels/1436156966648152271/).
 
 Honorable mention on the video side: the **Mesh Client V6 walkthrough** is up at https://youtu.be/iRu1FDME0-w — a good watch if you want to see the new version in motion.
 

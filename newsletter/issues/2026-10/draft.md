@@ -9,14 +9,13 @@ Bigger than the Sept issue by design. Run dedup-check.py before publishing.
 
 # Colorado Mesh Monthly — October 2026
 
-> Happy almost-Halloween, Colorado. October was the month the mesh started
-> thinking hard about *emergencies* — a homegrown protocol for emergency
-> comms (MECP), a push into TAK, and a volunteer emergency reporting network —
-> all while Mesh Client shipped a monster V6, the map got a faster brain
-> (say hello to Beacon), and wardrivers lit up everything from Durango to
-> Buena Vista to the back roads off I-25. We've got more to cover than last
-> month, so grab a warm drink and settle in. As always, it's sorted so you can
-> jump straight to your corner of the mesh.
+> Hello again, Colorado. October was the month the mesh started thinking hard
+> about *emergencies* — a homegrown protocol for emergency comms (MECP) and a
+> push into TAK — all while Mesh Client shipped a monster V6, the map got a
+> faster brain (say hello to Beacon), and wardrivers lit up everything from
+> Durango to Buena Vista to the back roads off I-25. We've got more to cover
+> than last month, so grab a warm drink and settle in. As always, it's sorted
+> so you can jump straight to your corner of the mesh.
 
 ## 📰 General News
 

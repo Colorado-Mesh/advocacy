@@ -36,7 +36,9 @@ Bigger than the Sept issue by design. Run dedup-check.py before publishing.
 
 ## 📸 Photo / Video of the Month
 
-Caption: [CONFIRM: pick the hero image — a strong candidate is a wardrive/map screenshot from the Durango or Buena Vista coverage expansion, or a solar-node build photo from #projects-and-builds. Drop the square-cropped image here as ![](photos/<name>_square_web.jpg).]
+![Zeva's new modular magnetic car node — the wardriving rig (photo: Zeva)](photos/carnode_square_web.jpg)
+
+Caption: Meet the wardriving rig. This is **Zeva's** new fully modular, magnetic car node — the kind of build that's been filling in the map from Grand Junction to the Front Range all month. Snap it to the roof, drive, and every trip adds coverage data. Photo: Zeva.
 
 Honorable mention on the video side: the **Mesh Client V6 walkthrough** is up at https://youtu.be/iRu1FDME0-w — a good watch if you want to see the new version in motion.
 
@@ -156,31 +158,3 @@ next issue. Big or small, we want it.
 
 **73** 📻
 
-<!-- ============================================================
-HERO PHOTO CANDIDATES (editorial — not rendered in the PDF)
-View side-by-side (full + 1:1 crop) at:
-  issues/2026-10/photos/hero-candidates/contact-sheet.html
-Tell me the number and I'll drop it into the Photo of the Month section
-(square-cropped to 1:1 on disk, per our house style).
-
-1. durango-newmexico-bridge  (#western-slope · nwithan8)  755x1240, portrait (0.61)
-   Map screenshot proving the Durango↔New Mexico inter-state link.
-   PRO: ties directly to a top MeshCore story. CON: tall portrait + a screenshot,
-   not a photo; heavy crop to reach 1:1.
-
-2. zeva-meshmapper-5th  (#wardriving · Zeva)  558x629, near-square (0.89)
-   Zeva's "#5 in the world" MeshMapper standing.
-   PRO: already near-square (minimal crop), ties to the wardriving highlight.
-   CON: also a screenshot.
-
-3. zeva-car-node  (#wardriving · Zeva)  1822x1035, landscape (1.76)
-   Zeva's new modular magnetic car node — the actual wardriving rig.
-   PRO: a real hardware photo with build energy. CON: wide; center-crop to square.
-
-4. jk-wio-build  (#projects-and-builds · jk)  1492x865, landscape (1.72)
-   jk's modified Wio Tracker L1 case with a pogo connector.
-   PRO: hands-on build, same spirit as last month's hero. CON: wide; center-crop.
-
-My pick: #3 (zeva-car-node) or #4 (jk-wio-build) — real photos beat screenshots
-for a hero. If you want a screenshot that tells the inter-state story, #1.
-============================================================ -->

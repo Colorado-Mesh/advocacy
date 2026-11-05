@@ -152,6 +152,35 @@ next issue. Big or small, we want it.
 
 **😄 Nerd Joke of the Month:** Why did the MeshCore repeater refuse to panic in an emergency? It knew help was only a few hops away.
 
-**🎁 The Prize:** congratulations to **jfh200** 🎉 — our winner this month, drawn at random from everyone who reacted to last month's newsletter announcement in Discord! This month's prize: **[PRIZE TBD — placeholder, admins to fill in]**. Want in next month? **React to this issue's announcement post** and you're entered.
+**🎁 The Prize:** congratulations to **jfh200** 🎉 — our winner this month, drawn at random from everyone who reacted to last month's newsletter announcement in Discord! This month's prize: an **Alfa N-type antenna** paired with an **N-type cable** — a solid upgrade for anyone looking to get a repeater or base node heard farther. Want in next month? **React to this issue's announcement post** and you're entered.
 
 **73** 📻
+
+<!-- ============================================================
+HERO PHOTO CANDIDATES (editorial — not rendered in the PDF)
+View side-by-side (full + 1:1 crop) at:
+  issues/2026-10/photos/hero-candidates/contact-sheet.html
+Tell me the number and I'll drop it into the Photo of the Month section
+(square-cropped to 1:1 on disk, per our house style).
+
+1. durango-newmexico-bridge  (#western-slope · nwithan8)  755x1240, portrait (0.61)
+   Map screenshot proving the Durango↔New Mexico inter-state link.
+   PRO: ties directly to a top MeshCore story. CON: tall portrait + a screenshot,
+   not a photo; heavy crop to reach 1:1.
+
+2. zeva-meshmapper-5th  (#wardriving · Zeva)  558x629, near-square (0.89)
+   Zeva's "#5 in the world" MeshMapper standing.
+   PRO: already near-square (minimal crop), ties to the wardriving highlight.
+   CON: also a screenshot.
+
+3. zeva-car-node  (#wardriving · Zeva)  1822x1035, landscape (1.76)
+   Zeva's new modular magnetic car node — the actual wardriving rig.
+   PRO: a real hardware photo with build energy. CON: wide; center-crop to square.
+
+4. jk-wio-build  (#projects-and-builds · jk)  1492x865, landscape (1.72)
+   jk's modified Wio Tracker L1 case with a pogo connector.
+   PRO: hands-on build, same spirit as last month's hero. CON: wide; center-crop.
+
+My pick: #3 (zeva-car-node) or #4 (jk-wio-build) — real photos beat screenshots
+for a hero. If you want a screenshot that tells the inter-state story, #1.
+============================================================ -->

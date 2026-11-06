@@ -10,7 +10,7 @@ Bigger than the Sept issue by design. Run dedup-check.py before publishing.
 # Colorado Mesh Monthly — October 2026
 
 > Hello again, Colorado. October was the month the mesh started thinking hard
-> about *emergencies* — a homegrown protocol for emergency comms (MECP) and a
+> about *emergencies* — rolling out MECP, a mesh emergency-comms protocol, and a
 > push into TAK — all while Mesh Client shipped a monster V6, the map got a
 > faster brain (say hello to Beacon), and wardrivers lit up everything from
 > Durango to Buena Vista to the back roads off I-25. We've got more to cover
@@ -19,7 +19,7 @@ Bigger than the Sept issue by design. Run dedup-check.py before publishing.
 
 ## 📰 General News
 
-- **Emergency communications took center stage.** A lot of this month's energy went toward making the mesh genuinely useful when it matters most — a new **MECP** (Mesh Emergency Communications Protocol) under active development, and a TAK bridge for situational awareness. The whole thread gets its own Story of the Month below, but it's the throughline of October.
+- **Emergency communications took center stage.** A lot of this month's energy went toward making the mesh genuinely useful when it matters most — rolling out **MECP** (the Mesh Emergency Communications Protocol) and a TAK bridge for situational awareness. The whole thread gets its own Story of the Month below, but it's the throughline of October.
 - **Admin team changes.** The leadership team shared a round of updates this month. Several admins stepped down to focus on other priorities — **👀, Dani, strex, Slim, and littlecrab (KFØWBX)** — and we're grateful for everything they put in. Please join us in welcoming **Zeva** to the admin team. The Admin Team handles day-to-day Discord and website operations; together with the Regional Representatives they make up the broader org leadership.
 - **One short link to rule them all.** Colorado Mesh now has a tidy set of short links on the `colome.sh` domain: `colome.sh/discord`, `colome.sh/wiki`, `colome.sh/start`, `colome.sh/mcmap` (MeshCore map) and `colome.sh/mtmap` (Meshtastic map), to name a few. Easier to share, easier to remember.
 - **Mesh Client v6.0.0 is here** — and it's big enough that it gets its own section below. The short version: new UI, a new BLE implementation, continued Reticulum work, and a lot more.
@@ -44,10 +44,8 @@ Honorable mention on the video side: the **Mesh Client V6 walkthrough** is up at
 ## 📶 Meshtastic
 
 - **Hold off on Meshtastic 2.8.** Multiple operators report that 2.8 releases are causing problems, including causing boot loops on Seeed Solar Nodes. If you're on 2.7 and stable, there's no rush to jump. ([#meshtastic](https://discord.com/channels/1436156966648152271/))
-- **Firmware 3.0 is on the horizon — and it changes bandwidth allocations.** Meshtastic 3.0 will shift how bandwidth is allocated, with a default LongTurbo preset in the United States. That said, switching to LongTurbo right now isn't recommended due to performance drops.
-- **MediumFast adoption is still the slow grind.** Some nodes in Denver are switching to MediumFast, as Colorado Mesh has recommended, but adoption remains slow since most people never change their default settings. This has caused a split between MediumFast and LongFast users. Preset defaults really do shape the whole network. If your area recommends MediumFast, the switch only pays off when neighbors make it too.
-- **A clever idea: MediumFast as a backhaul.** Meanwhile, some have floated the idea of using MediumFast as an amplified point-to-point backhaul — super-long links between sites — with local breakouts onto LongFast.
-- **The Lookout Mountain bridge is half-alive.** Zeva has a LongFast node and a Wi-Fi bridge up on Lookout Mountain; the goal is to bridge LongFast and MediumFast over serial and echo it all to MQTT. Not finished, but a real step toward tying the high-site plumbing together.
+- **Firmware 3.0 is on the horizon — and it changes bandwidth allocations.** Meshtastic 3.0 will shift how bandwidth is allocated. Worth knowing before you make big preset changes — in general it's best to match whatever your local area is already running.
+- **The Lookout Mountain bridge is half-alive.** Zeva has a node and a Wi-Fi bridge up on Lookout Mountain, bridging the local presets over serial and echoing it all to MQTT. Not finished, but a real step toward tying the high-site plumbing together.
 - **Commerce City feeder node is back online.** Live on-mesh Meshtastic data is being collected by a feeder node near the Rocky Mountain Arsenal and published to https://potato.meshtastic.coloradomesh.org. This provides a more holistic view of metro Denver and Fort Collins traffic, not just over-MQTT data.
 - **Remote firmware from the mountain.** omgitsgela described a GL.iNet-router-over-ZeroTier setup that serves serial + firmware data to mountaintop nodes, so you can update and reconfigure without the climb. A good pattern for anything hard to reach.
 
@@ -62,6 +60,7 @@ Honorable mention on the video side: the **Mesh Client V6 walkthrough** is up at
 ## 🛰️ Reticulum
 
 - **Reticulum-over-MeshCore gets a working baseline.** Reticulum has been a first-class part of Mesh Client for a while now — the news this month is narrower and more technical: Zeva got a **Reticulum-on-MeshCore** baseline build working (WiFi clients on MeshCore are still failing, Meshtastic testing pending). It's early, but it's another transport combination coming together.
+- **A second way onto Reticulum: Rettui.** If a terminal is more your speed than a desktop app, Zeva is building **Rettui**, a lightweight Reticulum TUI (text UI) — a separate project from Mesh Client, now with an Android release and a few built-in games to boot. Grab it at https://github.com/zevaryx/rettui/releases
 - **NomadNet keeps growing.** Zeva expanded their NomadNet interfaces and added saved-location storage (identifying nodes on connect), and shared the NomadNet-Pages repo for anyone building `.mu` pages: https://github.com/SebastianObi/NomadNet-Pages
 - **On the dev bench.** Rin has been poking at Reticulum features — a possible fingerprint-button function, optional userid/password auth on sites — and sharing reference-doc thoughts for developers. The RRC hub remains an active gathering spot; it's still the easiest no-RF on-ramp to the whole hobby.
 
@@ -71,7 +70,7 @@ A busy month at the workbench — new radios, new bridges, and a few "learn from
 
 - **TAK is the new frontier.** W0RMT released **meshcore-tak-bridge**, which connects a MeshCore companion node to ATAK for full messaging. It's moving fast: **v0.1.2** added direct-message delivery receipts and radio battery monitoring (on-screen percentage plus low-battery alerts at 20% and 10%), and **MECP decoding + map-marker placement now work** in the bridge. A dedicated `#tak` channel and server role appeared to house all of it.
 - **A new radio to watch.** The **Radioddity Nodara Meshtastic radio** is out and slated for review (JohnnyW5KV) — product page: https://www.radioddity.com/products/radioddity-nodara-meshtastic-radio
-- **RFOXiA — a long-range BLE module that meshes.** A new protocol is being added to Mesh Client to support the RFOXiA BLE module; the manufacturer is sending two units to enable it. Heads-up from Rin: the RFOXiA firmware has a **50-byte message limit** (a compile-time constant, not a BLE/radio limitation), and the docs don't quite match the code yet.
+- **RFOXiA — a long-range BLE module that meshes.** A new protocol is being added to Mesh Client to support the RFOXiA BLE module; the manufacturer is sending two units to enable it. More on the module: https://rfoxia.com/premium-ble-module/
 - **A quiet, cheap build tip.** beala released a custom MeshCore build that **disables the LED and buzzer** (great for a silent, low-power node) — https://github.com/beala/MeshCore/releases/tag/t1000e-v1.17.1
 - **Still a crowd favorite: the RAK 1W.** JohnnyW5KV again gives the RAK 1W board a thumbs-up for its integrated input/output filters — "an awesome little board for the price." Zeva confirms a 3000 mAh battery pairs with the RAK 1W companion without issues.
 - **Solar builds everywhere.** Darin built a first solar node from an ACE Hardware solar light; beala shared a custom LFP + LR2021-carrier charger; UtahSTI stood up a solar repeater (SenseCAP P1-Pro) in Hesperus bound for a rooftop with a 5.8 dBi antenna. Zeva's modular magnetic car-node design continues — there's a 1W low-profile solar car-node model on Printables.
@@ -107,7 +106,7 @@ A few people who moved the mesh this month:
 - **budt W0RMT** — a one-person TAK pipeline, shipping the meshcore-tak-bridge, wiring up MECP decoding, and synthesizing community discussion into real documentation.
 - **Zeva** — everywhere again: Mesh Client V6, Reticulum integration, Dockerizing the client, a Grand Junction wardrive, a #5 MeshMapper finish, and a steady stream of hardware builds.
 - **nwithan8** — Beacon, observer onboarding, and MQTT plumbing.
-- **omgitsgela** — EmComm planning energy, the MediumFast-backhaul idea, and a plan to seed $20 nodes into the gaps.
+- **omgitsgela** — EmComm planning energy, sharp ideas on extending backhaul links, and a plan to seed $20 nodes into the gaps.
 
 And a warm welcome to everyone who built their first node this month — including **Darin**, whose first solar node came out of an ACE Hardware solar light. That's the spirit.
 
@@ -124,7 +123,7 @@ And a warm welcome to everyone who built their first node this month — includi
 
 Every hobby network eventually faces the same question: *what is this actually for?* In October, Colorado Mesh started answering it out loud — and the answer kept coming back to emergencies.
 
-The spark is a protocol. There's long been an awkward truth in the mesh world, and Rin said it plainly this month: there are **no real EMCOMM standards for LoRa mesh networks**. The established emergency framework, ICS, assumes infrastructure a mesh simply can't provide. So the community started building its own — **MECP**, the Mesh Emergency Communications Protocol — a structured way to move emergency information over LoRa mesh. It's early and the message volume is already enough that Rin asked for a summary doc just to keep up, but the pieces are moving fast: budt W0RMT already has **MECP decoding and map-marker placement working** inside the meshcore-tak-bridge, which pipes mesh traffic into **ATAK**, the situational-awareness tool a lot of EmComm and SAR folks already live in.
+The spark is a protocol. There's long been an awkward truth in the mesh world, and Rin said it plainly this month: there are **no real EMCOMM standards for LoRa mesh networks**. The established emergency framework, ICS, assumes infrastructure a mesh simply can't provide. So the community went looking — and started rolling out **MECP** (the Mesh Emergency Communications Protocol, mecp.radio), a structured way to move emergency information over LoRa mesh. It's early, and the message volume is already enough that Rin asked for a summary doc just to keep up, but the pieces are moving fast: budt W0RMT already has **MECP decoding and map-marker placement working** inside the meshcore-tak-bridge, which pipes mesh traffic into **ATAK**, the situational-awareness tool a lot of EmComm and SAR folks already live in.
 
 Around that protocol, an ecosystem is forming. omgitsgela — an actual emergency communicator — stepped up to help plan, and is sourcing ~$20 nodes to push coverage into the mountains and highway corridors where cell service dies and a mesh would matter most.
 

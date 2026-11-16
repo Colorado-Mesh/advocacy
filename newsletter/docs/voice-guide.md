@@ -98,20 +98,8 @@ section appears every month — skip empty ones rather than pad.
     posts, videos, tools, articles). E.g. beala's Substack, JohnnyW5KV's videos.
 12. **📖 Story of the Month** — one longer featured piece: a deployment saga, a
     build log, a "how we linked to Nebraska" narrative. The reading centerpiece.
-13. **Sign-off** — warm goodbye, the **Nerd Joke of the Month**, the **Prize**
-    callout (see below), and an invite to contribute to next issue.
-
-## The Prize (recurring feature)
-
-Each issue, we give away a prize (supplied by the group). **The winner is drawn
-at random from everyone who reacted to the PREVIOUS month's newsletter post in
-Discord.** So the sign-off should:
-- Announce **this month's winner** (drawn from last month's reactions) — [CONFIRM
-  the handle with whoever ran the draw].
-- Remind readers: **react to THIS issue to be entered for next month's prize.**
-- Note what the prize is if known.
-(Mechanically: the Discord gatherer can later collect reactors on the newsletter
-message to seed the draw — a small follow-up once we're posting via a known message.)
+13. **Sign-off** — warm goodbye, the **Nerd Joke of the Month**, and an invite
+    to contribute to next issue.
 
 ## Signature bits (recurring flavor — use sparingly, keep them fresh)
 

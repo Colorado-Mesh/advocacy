@@ -111,8 +111,8 @@ recurring ones). Each section maps to a CSS class `s-<key>` + a badge.
 10. **📖 New on the Wiki** (`s-wiki`) — pages added/updated (from gather-wiki).
 11. **🌐 Around the Web** (`s-web`) — good links that live outside Discord.
 12. **📗 Story of the Month** (`s-story`) — one longer featured narrative.
-13. **👋 Sign-off** (`s-bye`) — warm goodbye, **Nerd Joke of the Month**, **Prize**
-    (random winner from the PREVIOUS issue's reactions; react to enter next month).
+13. **👋 Sign-off** (`s-bye`) — warm goodbye, **Nerd Joke of the Month**, and an
+    invite to contribute to next issue.
 14. **🔖 Sources & Further Reading** (`s-cite`) — numbered references, own page.
 
 ## 5. Item schema (for the items list + triage)

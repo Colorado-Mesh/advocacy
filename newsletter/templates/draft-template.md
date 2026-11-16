@@ -64,6 +64,4 @@ The community's cross-platform **Mesh Client** app (Windows/macOS/Linux) speaks 
 
 **😄 Nerd Joke of the Month:** <pun>
 
-**🎁 The Prize:** <this month's winner drawn from last issue's reactions [CONFIRM]>. React to this issue to enter for next month!
-
 **73** 📻

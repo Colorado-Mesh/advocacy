@@ -33,7 +33,7 @@ and read by a human. This doc is the process.
 | **Gatherer** | Kiro (automated) | Runs the monthly gather + triage, produces the items list and a first draft. |
 | **Editor** | A designated community member | Owns the issue: curates items, writes/edits copy, resolves every `[CONFIRM]`, runs the checklist, approves. |
 | **Fact-checker** | An admin/operator (ideally) | Verifies the Big News, Community Reminders, and any claim about infrastructure, people, or numbers. |
-| **Publisher** | Editor or admin | Posts the approved issue to Discord and attaches the PDF; runs the prize draw. |
+| **Publisher** | Editor or admin | Posts the approved issue to Discord and attaches the PDF. |
 
 For a small team, one person can wear several hats — but **at least two sets of
 eyes** should see an issue before it posts (editor + one admin), especially the
@@ -60,9 +60,7 @@ Big News and anything with a callsign.
 8. **Approve** (Editor + admin): sign off. Only now is it publishable.
 9. **Publish** (Publisher): share the final PDF in Discord (attachment or link)
    in the agreed channel; pin it.
-10. **Prize** (Publisher): draw last month's winner from prior-issue reactions;
-    announce; remind people to react to enter for next month.
-11. **Carryover** (Editor): update `carryover.md` — close resolved threads, add
+10. **Carryover** (Editor): update `carryover.md` — close resolved threads, add
     new ongoing ones.
 
 ## Fact-check checklist (the gate before publishing)
@@ -79,7 +77,6 @@ Resolve **every** item before approving. No `[CONFIRM]` markers may remain.
 - [ ] **No private info** — names, addresses, anything not already public.
 - [ ] **No unverified rumor** — if it can't be sourced, it's cut, not softened.
 - [ ] **Tone** passes the voice-guide litmus test (sounds like a real human).
-- [ ] **Prize** winner (if any) confirmed with whoever ran the draw.
 
 ## Sourcing standard
 

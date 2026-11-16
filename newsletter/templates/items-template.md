@@ -79,5 +79,5 @@ _One longer featured narrative — a deployment saga, a build log, a link-up._
 ---
 
 ## Notes for the reviewer
-_Uncertain callsigns/facts to confirm, things to leave out, the prize winner._
+_Uncertain callsigns/facts to confirm, things to leave out._
 - 

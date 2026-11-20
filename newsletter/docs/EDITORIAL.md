@@ -33,7 +33,7 @@ and read by a human. This doc is the process.
 | **Gatherer** | Kiro (automated) | Runs the monthly gather + triage, produces the items list and a first draft. |
 | **Editor** | A designated community member | Owns the issue: curates items, writes/edits copy, resolves every `[CONFIRM]`, runs the checklist, approves. |
 | **Fact-checker** | An admin/operator (ideally) | Verifies the Big News, Community Reminders, and any claim about infrastructure, people, or numbers. |
-| **Publisher** | Editor or admin | Posts the approved issue to Discord and attaches the PDF. |
+| **Publisher** | Editor or admin | Posts the approved issue to Discord (link or pasted text; PDF if one was made). |
 
 For a small team, one person can wear several hats — but **at least two sets of
 eyes** should see an issue before it posts (editor + one admin), especially the
@@ -56,10 +56,11 @@ Big News and anything with a callsign.
 6. **Fact-check** (Fact-checker): work the checklist below. This is the gate.
 7. **Photo + citations** (Editor): choose the Photo of the Month; make sure every
    notable claim has a link or a Sources entry.
-7. **Render** (Editor): `./build-pdf.py issues/<month>/draft.md`; proofread the PDF.
+7. **Export** (Editor): `tools/md-to-text.py issues/<month>/draft.md`; read the text
+   version. Optionally `tools/build-pdf.py` for a PDF and proofread it.
 8. **Approve** (Editor + admin): sign off. Only now is it publishable.
-9. **Publish** (Publisher): share the final PDF in Discord (attachment or link)
-   in the agreed channel; pin it.
+9. **Publish** (Publisher): share the issue in Discord (link to the markdown or
+   the pasted text version) in the agreed channel; pin it.
 10. **Carryover** (Editor): update `carryover.md` — close resolved threads, add
     new ongoing ones.
 

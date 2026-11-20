@@ -135,10 +135,13 @@ See `EDITORIAL.md`: humans review; every claim sourced; callsigns exact; no
 `[CONFIRM]` markers may remain before publishing.
 
 ## 8. Output
-- **A single PDF** is the deliverable. `build-pdf.py issues/<month>/draft.md`
-  → styled HTML → Browserless /pdf. Write the draft as clean markdown — no
-  length limits, no message chunking.
-- **Publishing** = share that PDF in Discord (attachment or link) and wherever
-  else the community wants it. There is no separate Discord-markdown format.
-- Verify PDF pages by rasterizing (pymupdf), not HTML screenshots — screenshots
-  don't reflect @page/pagination.
+- **Markdown is the primary deliverable.** Write the draft as clean markdown —
+  no length limits, no message chunking. `md-to-text.py issues/<month>/draft.md`
+  exports a wrapped plain-text version for Discord, email, or anywhere markdown
+  doesn't render.
+- **The PDF is optional and secondary.** `build-pdf.py issues/<month>/draft.md`
+  → styled HTML → Browserless /pdf, for a printable or attachable copy.
+- **Publishing** = commit the markdown and share the link, or paste the text
+  version, in Discord and wherever else the community wants it.
+- If you make a PDF, verify pages by rasterizing (pymupdf), not HTML
+  screenshots — screenshots don't reflect @page/pagination.

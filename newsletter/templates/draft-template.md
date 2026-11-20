@@ -1,11 +1,12 @@
 <!--
 DRAFT TEMPLATE — compose to DESIGN.md §4 order. Facts only (from the items list);
 [CONFIRM: ...] anything unverified. Compose against voice-guide.md. Output is a
-PDF (build-pdf.py) — write clean markdown; no length limits, no message chunking.
-The finished PDF is shared in Discord as an attachment/link. A HUMAN reviews
+markdown is the primary output (md-to-text.py makes the plain-text version; build-pdf.py
+makes an optional PDF). Write clean markdown; no length limits, no message chunking.
+The finished issue is shared in Discord as a link or pasted text. A HUMAN reviews
 (EDITORIAL.md checklist) before publish.
 
-Section heading -> CSS mapping is by keyword (see build-pdf.py classify()):
+If a PDF is built, section heading -> CSS mapping is by keyword (see build-pdf.py classify()):
   General News, Events, Photo/Video, Meshtastic, MeshCore, Reticulum,
   For Sale, Call to Action, Community Spotlight, New on the Wiki, Around the Web,
   Story of the Month, Until Next Month, Sources.

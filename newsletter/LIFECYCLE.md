@@ -1,6 +1,6 @@
 # Newsletter Lifecycle
 
-How an issue of *Colorado Mesh Monthly* goes from raw chatter to a published PDF.
+How an issue of *Colorado Mesh Monthly* goes from raw chatter to a published issue.
 
 There are two tracks that run in lockstep:
 - **Code lifecycle** — the automated pipeline (like CI stages) that produces artifacts.
@@ -17,8 +17,8 @@ much easier to cut a topic from a list than to rewrite a laid-out PDF.
   0. Gather        →    raw messages (LOCAL ONLY)    — (automated, private)
   1. Topics list   →    PICK-LIST.md                 ▸ GATE 1: admins pick topics
   2. Markdown draft→    draft.md                      ▸ GATE 2: editors edit copy
-  3. PDF draft     →    draft PDF                     ▸ GATE 3: final look/layout
-  4. Publish       →    newsletter-<month>.pdf        ▸ GATE 4: admin approval → ship
+  3. Text export   →    newsletter-<month>.txt        ▸ GATE 3: final read-through
+  4. Publish       →    draft.md + .txt (+ PDF)       ▸ GATE 4: admin approval → ship
 ```
 
 ---
@@ -52,23 +52,27 @@ Compose the picked topics into real prose, in the newsletter voice.
   - the fact-check checklist in `docs/EDITORIAL.md` (callsigns, attributions, numbers).
   No `[CONFIRM]` markers may remain. Output: approved copy.
 
-## Stage 3 — PDF Draft  ▸ **GATE 3: Final look & layout**
-Render the approved markdown into the branded PDF for a visual proof.
-- **Code:** `tools/build-pdf.py draft.md` → styled HTML (`templates/pdf-template.html`
-  + `brand/`) → Browserless → PDF. Choose the Photo of the Month here.
-- **Artifact:** a draft PDF (not the final filename yet).
-- **Gate:** proof every page — layout, the photo, no orphaned text, page breaks.
-  Small copy fixes loop back to Stage 2 (cheap). Output: layout approved.
+## Stage 3 — Text Export  ▸ **GATE 3: Final read-through**
+Export the approved markdown to plain text and give it one last read.
+- **Code:** `tools/md-to-text.py draft.md` → `issues/<month>/newsletter-<month>.txt`.
+- **Optional PDF:** `tools/build-pdf.py draft.md` → styled HTML
+  (`templates/pdf-template.html` + `brand/`) → Browserless → PDF. Make one only if
+  someone wants a printable copy. If you do, choose the Photo of the Month here
+  and proof every page.
+- **Gate:** read the text version top to bottom: links, names, no leftover
+  `[CONFIRM]` markers. Fixes loop back to Stage 2 (cheap).
 
 ## Stage 4 — Publish  ▸ **GATE 4: Admin approval → ship**
-Produce the final artifact and release it.
-- **Code:** final `tools/build-pdf.py` → `issues/<month>/newsletter-<month>.pdf`.
+Release the issue.
+- **Code:** re-run `tools/md-to-text.py` on the final draft (and `tools/build-pdf.py`
+  if a PDF is wanted).
 - **Gate:** an admin gives the final yes.
 - **Ship:**
-  1. Commit the issue's markdown + final PDF to the advocacy repo (NOT the data/).
-  2. Post to Discord (PDF attachment + teaser) in the agreed channel; pin it.
-  3. Ask people to REACT (seeds next month's prize draw).
-  4. Record the posted message ID; update `carryover.md`.
+  1. Commit the issue's markdown + text export (and PDF if made) to the advocacy
+     repo (NOT the data/).
+  2. Post to Discord (link to the markdown, or paste the text version) in the
+     agreed channel; pin it.
+  3. Update `carryover.md`.
 
 ---
 
@@ -92,7 +96,7 @@ Produce the final artifact and release it.
   there — `main` stays clean.
 - When the issue ships (Gate 4 approved), open a PR from `issue-YYYY-MM` into
   `main` and merge it. Delete the branch after merge.
-- Only the publishable artifacts are committed (draft.md + final PDF); raw data,
+- Only the publishable artifacts are committed (draft.md, the text export, and a PDF if one was made); raw data,
   photos, and state stay gitignored (see DATA-PRIVACY.md).
 
 ## Who does what

@@ -1,0 +1,297 @@
+COLORADO MESH MONTHLY — NOVEMBER 2026
+=====================================
+
+Hello again, Colorado. This month the mesh looked outward. People offered high
+ground in Fraser and Fort Morgan, and we still need an observer out toward
+Sterling. Meanwhile the tools kept getting better: Mesh Client shipped several
+releases, there is a MeshCore client for your wrist, and the emergency-comms
+work around MECP kept moving. It is sorted by protocol, so jump to your corner
+of the mesh.
+
+GENERAL NEWS
+------------
+
+- Mesh Client kept shipping. After the big V6 release last issue, the client
+  put out v6.6.0 on November 3, v6.7.0 and v6.7.1 on November 13 and 14, and
+  v6.8.0 on November 16, and it is at v6.10.0 as of this writing. The
+  community is also working on iOS and Android builds. Early layout tests are
+  running, and a few members have started on the Android side. Release notes:
+  https://github.com/Colorado-Mesh/mesh-client/releases
+
+- MECP support keeps maturing. MECP (https://mecp.radio) is an
+  emergency-messaging format for LoRa mesh that Mesh Client supports. This
+  month MECP plain-text decoding started working in the Mesh Client TAK
+  server, and MECP messages with location data now plot on a connected ATAK
+  map and clear off it once they are resolved in the incidents tab.
+  Contributors are also building shared test vectors so that different MECP
+  clients read the same message the same way. The spec lives at
+  https://github.com/mecp-org/MECP.
+
+- Weekly Net reminder. A check-in is any message on the MeshCore Public
+  channel between 12:00 a.m. and 11:59 p.m. on Thursday. It is not just the
+  one-hour Discord event.
+
+EVENTS & MEETUPS
+----------------
+
+- A new weekly meetup in Fort Collins. Dervish and another member meet every
+  Thursday at 6 p.m. to work on alternative-communication projects, test
+  devices, and plan what to build next. They have Cardputers on hand. If you
+  want to join, ask in #foco-greeley
+  (https://discord.com/channels/1436156966648152271/1436158864998273055) for
+  the location.
+
+- Wardriving and MeshWars. Wardriving is a year-round effort. MeshWars runs on
+  the MeshMapper app, so once MeshWars is configured, your drives upload to
+  both. New to it? Ask in #wardriving
+  (https://discord.com/channels/1436156966648152271/1481694714087604334),
+  where members regularly help each other get set up and verify nodes.
+
+PHOTO / VIDEO OF THE MONTH
+--------------------------
+
+No photo or video was selected for this issue. Have one you are proud of, such
+as a build, a rooftop install, or a view from a summit? Post it in the
+channels and tell us it is okay to feature it, and it can be next month's.
+
+MESHTASTIC
+----------
+
+- A quieter month on the Meshtastic side. If you are setting up a new node,
+  the wiki's Common Channels page lists the shared community channels:
+  https://wiki.coloradomesh.org/index.php/Common_Channels
+
+- Shared maps without cell service. Carroted Maps (formerly Flaresat) is an
+  app that lets a group share one map over a paired MeshCore or Meshtastic
+  radio, with no cell signal and no account. The November update added route
+  sharing, alert zones, and a 24-hour replay. Radio and mesh features are
+  free; the paid tier covers things like longer replay history and weather
+  layers.
+
+MESHCORE
+--------
+
+- WearMesh puts MeshCore on your wrist. budt W0RMT released a first test
+  version of WearMesh, a MeshCore client for Wear OS smartwatches. The watch
+  talks straight to your companion radio over Bluetooth, with no phone needed,
+  for channel and direct messages. It needs a Wear OS 4+ watch (a Pixel Watch
+  is the development platform), a companion radio on BLE firmware, and a
+  computer with adb to sideload it. The author is looking for early testers
+  and notes the app was built with AI assistance. Release and tester guide:
+  https://github.com/Colorado-Mesh/wearmesh/releases/tag/v0.1.0
+
+- FluxCore, a new MeshCore fork. beala announced FluxCore, an independent fork
+  of MeshCore. One feature: instead of discarding packets that arrive damaged,
+  it tries to recover them and logs them to a special "Damaged" channel, with
+  unrecoverable bytes shown as "▒". A time-of-flight ranging feature that
+  estimates the distance between two nodes is in progress. It is early work.
+  Announcement: https://beala.substack.com/p/fluxcore-a-new-meshcore-fork
+
+- Ideas from the Dutch MeshCore community. mplewis shared the repeater
+  features in the latest Dutch MeshCore release: per-origin advert windows,
+  path-prefix blocking, a dry-run mode, saved-airtime counters, rules for
+  group text (block, throttle), and a configurable message-age limit. Worth a
+  read if you run a busy repeater:
+  https://github.com/Dutch-MeshCore/MeshCore/releases/tag/dmc-repeater-dev
+
+- Good to know: MeshCore is built for reach, not secrecy. When someone asked
+  whether MeshCore suits a privacy-focused group, cj gave a straight answer in
+  #meshcore
+  (https://discord.com/channels/1436156966648152271/1436175539135058082):
+  group-text packets and their repeats can be seen, even when the channel and
+  message contents are not known, and you can see that on the map in Mesh
+  Client. For anything that absolutely has to stay private, cj pointed to
+  Reticulum (if you need LoRa) or an encrypted messenger like Signal. Treat
+  what you send on the public mesh as public.
+
+- Small tip from jk: battery statistics are now available from the MeshCore
+  CLI.
+
+RETICULUM
+---------
+
+- Rettui 2.0 is out, and it is a one-way upgrade. Zeva's Reticulum text UI (a
+  separate project from Mesh Client) released v2.0.0 on November 16. Version
+  2.0 changes the storage backend to one that is not compatible with 1.x, so
+  once you upgrade there is no going back. It also includes critical security
+  patches, and Zeva recommends everyone upgrade. A fuller breakdown of the
+  issues is planned once the release has been out a few weeks. Releases:
+  https://github.com/zevaryx/rettui/releases
+
+- More in Rettui since last issue. Version 1.10 added a Repos tab for
+  browsing, cloning, and mirroring git repositories hosted on rngit nodes over
+  Reticulum, plus nine more built-in games.
+
+- A driver for the truSDX. James W5PL wrote a driver that makes the truSDX a
+  usable radio for Reticulum:
+  https://github.com/jwheeler188/W5PL-truSDX-Driver
+
+- No RF needed to try Reticulum. The Colorado Mesh RRC hub is still the
+  easiest on-ramp. If you have an internet connection, you can join and get a
+  feel for it before buying a radio. Join in #reticulum
+  (https://discord.com/channels/1436156966648152271/1455311030832992298).
+
+GEAR & FIRMWARE
+---------------
+
+- Cold-weather battery warning. Lithium-ion cells should not be charged below
+  freezing (32°F / 0°C). JohnnyW5KV looked for a battery management board for
+  single-cell packs that cuts off charging in the cold and found that most do
+  not. Multi-cell (3S or 4S) packs usually have temperature protection.
+  Another option is a charger built around a thermistor, or a
+  low-temperature-rated cell. His reassurance for small solar setups: the
+  plating damage that cold charging causes is worst at high charge rates, and
+  a small panel pushing an amp or two is low risk. If your solar node is
+  heading into a Colorado winter, plan for this before the first hard freeze.
+
+- Dual-band, 1 watt on both. beala sent the first messages through a custom
+  WisBlock module with 915 MHz and 2.4 GHz radios, each at 1 watt.
+
+- A neat 3D-printed case for the Heltec V4. Pete's design gives easy access to
+  the hardware pins and has a slot for an SMA dongle. An RJ11 jack carries
+  UART, a cheap way to chain other microcontroller boards.
+
+- A bigger battery for the T-Deck. Half Live shared a custom T-Deck case with
+  an 8000 mAh battery and an external GPS antenna.
+
+- Enclosure tip. Zeva recommends PETG for its temperature resistance. For an
+  attic install, PETG is plenty. JohnnyW5KV adds that if you put a repeater by
+  a window, older windows are better for RF.
+
+- A touchscreen for a home node. JohnnyW5KV suggested pairing an Elecrow
+  Crowpanel Advance with an SX1262 radio module as a touchscreen front end for
+  home mesh setups.
+
+GET THE MESH CLIENT
+-------------------
+
+The community's free, cross-platform Mesh Client (Windows, macOS, Linux)
+speaks Meshtastic, MeshCore, and Reticulum from one window. It has been
+getting regular updates, and it is currently at v6.10.0. Thanks to Joey
+(NV0N), its lead developer, and to the contributors testing builds. Download:
+https://colome.sh/client
+
+FOR SALE & WANTED
+-----------------
+
+- No member classifieds came in this month. Got gear to sell or a part you are
+  hunting for? Post it in the channels and we will list it next issue.
+
+CALL TO ACTION
+--------------
+
+- Set up an observer in the Sterling and Fort Morgan area. Someone asked how
+  to get MeshMapper coverage out along I-76 toward Sterling, and the answer
+  from nwithan8 was that the area needs an observer first. If you are out
+  there, or you commute through, this is the single most useful thing you can
+  do. The guide: https://colome.sh/mcmqtt
+
+- Help build the mesh east and up. Several newcomers are offering sites: one
+  in Fraser, one with property in Fort Morgan, one planning a link through
+  Middle Park toward Grand Lake. Say hello in #mesh-planning
+  (https://discord.com/channels/1436156966648152271/1456820628870008984) and
+  help them pick equipment and locations.
+
+- Test something new. budt W0RMT needs WearMesh testers (see MeshCore above).
+  Half Live is building Grid Strike, a battleship-style multiplayer game that
+  plays over the mesh, and wants testers with a T-Deck Plus running Wadamesh:
+  https://github.com/halflive-743/grid-strike
+
+COMMUNITY SPOTLIGHT
+-------------------
+
+- budt W0RMT shipped WearMesh, kept the MeshCore-to-ATAK bridge moving, and
+  keeps connecting MECP work with the Mesh Client TAK server.
+
+- cj ran layout tests on early iOS and Android builds of Mesh Client and walks
+  people through exporting bug reports so developers can see what went wrong.
+
+- beala announced FluxCore, built a dual-band 1-watt WisBlock module, and is
+  working on ranging between nodes.
+
+- JohnnyW5KV marked 11 years as a ham radio operator with his first contacts
+  on 60 meters, and shared a video of the doublet antenna he built for 80
+  through 10 meters.
+
+- Welcome to the newcomers who got set up this month, including slushbob,
+  shadowblackRS, and stinger, who has a small piece of land and plans for a
+  repeater.
+
+AROUND THE WEB
+--------------
+
+- Carroted Maps (shared offline maps over MeshCore and Meshtastic radios):
+  https://apps.apple.com/app/carroted-maps/id6758274987
+
+- MeshMapper overview (how the mapping app works):
+  https://wiki.meshmapper.net/app_overview/
+
+- MeshCore range check tool: https://rangecheck.meshcore.coloradomesh.org/app
+
+- Colorado MeshCore radio settings (wiki): https://colome.sh/wiki
+
+STORY OF THE MONTH: EAST AND UP
+-------------------------------
+
+Much of the conversation about the Colorado mesh has centered on the Front
+Range. In November, the people who showed up were offering to extend it.
+
+On the eastern plains, a newcomer who commutes between Golden and Fort Morgan
+introduced themselves and offered to install and maintain a node on property
+in Fort Morgan. They asked the right questions: are there existing nodes
+around Hudson and Wiggins, and would Meshtastic or MeshCore be more useful out
+there? Later in the month, another member asked whether MeshMapper could cover
+the stretch from Fort Morgan to Sterling. The answer from nwithan8 was
+practical: the area needs an observer before the map can fill in. There is a
+to-do list in that exchange, and it is an open invitation.
+
+In the mountains, slushbob switched from Meshtastic to MeshCore and brought up
+a node west of Fraser, overlooking the valley. Another member started planning
+a repeater in the same area and a link through Middle Park, with a friend near
+Grand Lake. nightcrawler planned a trip to the property near Kremmling over
+Thanksgiving week to get a repeater running again. Out west, the question of a
+repeater on FlatTop came up in the Western Slope channel.
+
+None of this needs a big budget. Each site is one person with a good view and
+a willingness to tinker. A hill or a ridgeline that nobody has covered yet is
+often what makes the difference between scattered coverage and a connected
+region, so if you have access to high ground on the plains east of Denver or
+in Middle Park, say so in #mesh-planning. Someone is probably looking for
+exactly that spot.
+
+SOURCES & FURTHER READING
+-------------------------
+
+- Website: https://colome.sh
+
+- Discord: https://colome.sh/discord
+
+- Wiki: https://colome.sh/wiki
+
+- MeshCore live map: https://colome.sh/mcmap
+
+- Meshtastic live map: https://colome.sh/mtmap
+
+- MeshCore config tools: https://colome.sh/mctools
+
+- Run a MeshCore observer: https://colome.sh/mcmqtt
+
+- Mesh Client: https://colome.sh/client
+
+- MeshCore Weekly Net check-in: https://colome.sh/mcnet
+
+- MECP: https://mecp.radio and https://github.com/mecp-org/MECP
+
+- Donate to keep the network running: https://colome.sh/donate
+
+UNTIL NEXT MONTH
+----------------
+
+That is November. If you lit up a repeater, printed an enclosure, took a good
+drive, or finally beat a stubborn problem, tell us and it will land in the
+next issue. Big or small, we want it.
+
+Nerd Joke of the Month: Why did the repeater go to therapy? Too many people
+kept asking it to relay their problems.
+
+73

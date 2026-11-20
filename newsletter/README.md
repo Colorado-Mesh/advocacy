@@ -10,11 +10,11 @@ we digest a month of activity into one friendly, nerdy read.
 
 ```
   [wiki API]  ─┐
-  [Discord]   ─┼─► gather ─► items-list.md ─► flesh ─► draft.md ─► PDF (styled, Browserless)
+  [Discord]   ─┼─► gather ─► items-list.md ─► flesh ─► draft.md ─► .txt export (+ optional PDF)
   [our notes] ─┘  (+state)   (auto + human)   out
                      ▲
                  carryover.md (multi-month thread memory)
-                             HUMANS review before the PDF ships (shared in Discord)
+                             HUMANS review before it ships
 ```
 
 1. **Gather** — run the gatherer scripts to pull activity since we last looked.
@@ -41,11 +41,13 @@ we digest a month of activity into one friendly, nerdy read.
    skipped — it's a public community publication. Pick the **Photo of the Month**
    and make sure notable claims have links (the **Sources & Further Reading**
    page collects the "read more" references).
-6. **Publish — the PDF is the deliverable:**
-   - `./build-pdf.py issues/<YYYY-MM>/draft.md` renders a designed, magazine-style
-     PDF via the homelab Browserless headless Chromium.
-   - Share that PDF in Discord (attachment or link) and wherever else the community
-     wants it. There's no separate Discord-markdown format.
+6. **Publish — markdown and plain text are the deliverables:**
+   - `draft.md` is the issue. Commit it to the repo; admins edit it there.
+   - `tools/md-to-text.py issues/<YYYY-MM>/draft.md` writes a wrapped plain-text
+     version for pasting into Discord, email, or anywhere markdown won't render.
+   - `tools/build-pdf.py issues/<YYYY-MM>/draft.md` renders a designed PDF via the
+     homelab Browserless headless Chromium. The PDF is optional and secondary;
+     make one when someone wants a printable or attachable copy.
 
 ## Triage: 24k messages → a curated shortlist (the monthly heavy lift)
 
@@ -126,9 +128,10 @@ Notes:
 | `authority.json` | Curated operator/authority map that weights whose messages matter most. |
 | `discord-guilds.txt` | Guild ALLOW-LIST — only these servers are ever touched (Colorado Mesh). |
 | `discord-exclude.txt` | Channel IDs you *can* read but don't want in the newsletter. |
-| `build-pdf.py` | Render a draft to a designed PDF via Browserless. |
+| `md-to-text.py` | Export a draft to wrapped plain text (primary alongside the markdown). |
+| `build-pdf.py` | Optional: render a draft to a designed PDF via Browserless. |
 | `state.json` | Per-channel high-water marks (created on first Discord run). |
-| `issues/<YYYY-MM>/` | Per-issue working folder (items list, draft, PDF). |
+| `issues/<YYYY-MM>/` | Per-issue working folder (items list, draft, text export, optional PDF). |
 
 ## Principles
 
